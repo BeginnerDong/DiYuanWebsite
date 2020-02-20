@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+/* 公司注册*/
+.registerBox1{padding: 30px 0;box-shadow: 0 -2px 10px rgba(153, 153, 153, 0.4);}
+.registerBox1 li{width: 33.3%;float: left;box-sizing: border-box;}
+.registerBox1 li h1{font-size: 32px;line-height: 40px;padding-bottom: 10px;position: relative;display: inline-block;margin: 0 auto;}
+.registerBox1 li h1::after{content: "起";font-size: 14px;line-height: 20px;position: absolute;right: -25px;top: -5px;}
+.registerBox1 li h1:nth-child(2)::after{content: "家";}
+.registerBox1 li h1:last-child::after{content: "名";}
+.registerBox1 li p{font-size: 14px;}
+
+
+/* 公司核名 */
+.registerStar{background: url(../images/registered-icon5.png) no-repeat left bottom/100% auto;padding-bottom: 60px;}
+.registerStar .cont{width: 100%;background:#aaa;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);padding: 50px 50px 30px 50px;box-sizing: border-box;border-radius: 5px;}
+.registerStar .seachbx{margin-bottom: 10px;}
+.registerStar .seachbx .left{width: 80%;padding: 15px 10px;background: #fff;box-sizing: border-box;}
+.registerStar .seachbx .item{width: 50%;position: relative;height: 30px;padding: 0 10px 0 60px;box-sizing: border-box;float: left;}
+.registerStar .seachbx .item .icon{width: 25px;height: 25px;display: block;position: absolute;top: 50%;left: 20px;transform: translateY(-50%);}
+.registerStar .seachbx .item input{width: 100%;height: 30px;display: block;background: none;font-size: 15px;}
+.registerStar .seachbx .right{width: 20%;}
+.registerStar .seachbx .seachBtn{width: 100%;height: 60px;line-height: 50px;background: #C51114;color: #fff;text-align: center;font-size: 14px;display: block;}
+.registerStar .seachbx .seachBtn img{width: 20px;height: 20px;display: inline-block; margin-right: 5px;vertical-align: middle;}
+.registerStar .B-infor{position: relative;padding:30px 3%;background-color: #fff;}
+.registerStar .B-infor .L,.registerStar .B-infor .M{width: 40%;position: relative;box-sizing: border-box;}
+.registerStar .B-infor .R{width: 20%;box-sizing: border-box;font-size: 15px;}
+.registerStar .B-infor .M{padding:0 3%;}
+.registerStar .B-infor .M::before{content:'';width: 1px;height: 120px;background: #ddd;position: absolute;left: 0;top: 20px;}
+.registerStar .B-infor .M::after{content:'';width: 1px;height: 120px;background: #ddd;position: absolute;right: 0;top: 20px;}
+.registerStar .B-infor h1{font-size: 18px;margin-bottom: 10px;}
+.registerStar .B-infor .L P{font-size: 13px; line-height: 30px;position: relative;padding-left: 15px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.registerStar .B-infor .L P::before{content: '';width: 6px;height: 6px;border-radius: 50%;background-color: #999;position: absolute;top: 50%;left: 0;transform: translateY(-50%);}
+.registerStar .B-infor .M .item{width: 33.3%;float: left;padding: 0 3%;box-sizing: border-box;}
+.registerStar .B-infor .M .icon{width: 35px;height: 35px;display: block;margin: 20px auto;}
+.registerStar .B-infor .R .icon{width: 60px;height: 60px;display: block; margin: 30px auto 15px auto;}
+.registerStar .B-text{margin-top: 20px;font-size: 15px;}
+
+
+/* 快捷流程 */
+.registerBox3 li{width: 25%;text-align: center;float: left;}
+.registerBox3 li .img{position: relative;}
+.registerBox3 li img{width: 90px;height: 90px;display: block;margin: 20px auto;}
+.registerBox3 li p{font-size: 16px;}
+.registerBox3 li .img::before{content: '';width: 60%;height: 1px;background: #ccc;position: absolute;right: 70%;top: 50%;transform: translateY(-50%);}
+.registerBox3 li .img::after{content: ''; position: absolute;top: 50%; right: 0;transform: translateY(-50%);border-top: 10px transparent dashed;border-right: 10px transparent dashed;border-bottom: 10px transparent dashed;border-left: 10px #ccc solid;}
+.registerBox3 li:first-child .img::before{display: none;}
+.registerBox3 li:last-child .img::after{display: none;}
+
+/* 所需材料 */
+.registerBox4 li{padding: 0 3%;box-sizing: border-box;width: 28%;float: left;box-sizing: border-box;}
+.registerBox4 li.liImg{width: 44%;}
+.registerBox4 li.liImg1{ display: none;}
+.registerBox4 li h1{font-size: 24px;line-height: 40px;padding-bottom: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-top: 20px;}
+.registerBox4 li p{font-size: 16px;line-height: 40px;}
+.registerBox4 li .ctImg{width: 70%;height: auto;display: block;margin: 0 auto;}
+
+/* 拿到材料 */
+.registerBox5{background: url(../images/home-img2.jpg) repeat;box-sizing: border-box;}
+.registerBox5 .left{width: 50%;padding: 0 3%;box-sizing: border-box;}
+.registerBox5 .picBox{transform:rotate(45deg);
+-ms-transform:rotate(-45deg); 	/* IE 9 */
+-moz-transform:rotate(-45deg); 	/* Firefox */
+-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+-o-transform:rotate(-45deg);}
+.registerBox5 .picBox .item{width: 110px;height: 110px;display: block;float: left;border: 1px solid #999;margin-top: -1px;}
+.registerBox5 .picBox .item img{height: 90px;width: 90px;margin: 17px auto;
+-ms-transform:rotate(45deg); 	/* IE 9 */
+-moz-transform:rotate(45deg); 	/* Firefox */
+-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+-o-transform:rotate(45deg);}
+.registerBox5 .picBox .item:nth-child(3){clear: left;margin-left: 111px;}
+.registerBox5 .picBox .item:nth-child(2n){border-left: 0;}
+.registerBox5 .right{width: 50%;padding: 0 3%;box-sizing: border-box;}
+.registerBox5 .right p{font-size: 16px;margin-top: 25px;}
+
+.registerBox6 .item{float: left;width: 20%;height: 244px;margin:0 2.5%;padding: 30px 3%;border-radius: 5px;background-color: #fff;box-shadow: 0 0 8px rgba(0,0,0,0.15);box-sizing: border-box;}
+.registerBox6 .item .icon{width: 35px;height: 35px;margin: 0 auto;background: url(../images/registered-icon15.1.png) no-repeat 0 0/100% 100%;}
+.registerBox6 .item:nth-child(1) .icon{background-image: url(../images/registered-icon15.1.png);}
+.registerBox6 .item:nth-child(2) .icon{background-image: url(../images/registered-icon16.png);}
+.registerBox6 .item:nth-child(3) .icon{background-image: url(../images/registered-icon17.png);}
+.registerBox6 .item:nth-child(4) .icon{background-image: url(../images/registered-icon18.png);}
+.registerBox6 .item h1{font-size: 18px;margin: 20px 0 15px 0;}
+.registerBox6 .item p{font-size: 15px;line-height: 30px; color: #999;}
+.registerBox6 .item:hover{background-color: #C51114; color: #fff;}
+.registerBox6 .item:hover p{color: #fff;}
+.registerBox6 .item:nth-child(1):hover .icon{background-image: url(../images/registered-icon15.png);}
+.registerBox6 .item:nth-child(2):hover .icon{background-image: url(../images/registered-icon16.1.png);}
+.registerBox6 .item:nth-child(3):hover .icon{background-image: url(../images/registered-icon21.png);}
+.registerBox6 .item:nth-child(4):hover .icon{background-image: url(../images/registered-icon22.png);}
+
+
+/* 为什么要选择缔元智能财税*/
+.registerBox7{margin-top: 30px;}
+.registerBox7 ul{align-items: initial;}
+.registerBox7 li{width: 25%;box-sizing: border-box;padding: 0 15px;}
+.registerBox7 li h1{font-size: 30px;line-height: 40px;padding-bottom: 20px;}
+.registerBox7 li p{width: 80%;color: #666;font-size: 16px;line-height: 30px;}
+
+
+/* 常见问题 */
+.register_quest li{padding: 20px 3% 20px 90px;box-sizing: border-box;margin: 30px auto 0 auto;position:relative;}
+.register_quest li .num{font-size: 36px;line-height: 40px;color: #9f9f9f;position: absolute;top: 50%;left: 20px;transform: translateY(-50%);font-family: 'MicrosoftYaHeiLight';}
+.register_quest li h1{font-size: 18px;line-height: 30px;padding-bottom: 10px;font-weight: bold;}
+.register_quest li p{font-size: 15px;color: #666;line-height: 26px;}
+.register_quest li p::before{content: "答：";}
+

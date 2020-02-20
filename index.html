@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>首页</title>
+		<script src="./js/vue.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/public.css">
+		<link type="text/css" rel="stylesheet" href="css/index.css">
+	</head>
+
+<body>
+	<div id="app">
+		<!-- 网站导航 -->
+		<div class="pubHeader">
+			<include src="header.html"></include>
+		</div>
+	
+		<!-- 网站头部 -->
+		<div class="pubHeadBanner">
+			<include src="headBanner.html"></include>
+		</div>
+	
+	
+		<!-- 业务类型 -->
+		<div class="index_fiveCard pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>业务类型</em><span class="xian right"></span></div>
+					<p>Business type</p>
+				</div>
+				<div>
+					<ul class="clearfix">
+						<li v-for="(item,index) in fiveCard">
+							<div class="title clearfix">
+								<p class="p1">{{item.title}}</p>
+								<p class="text">{{item.price}}元起</p>
+							</div>
+							<div class="infor">
+								<span class="btn center">我要办理</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<!-- 创业必备服务 -->
+		<div class="bjgayf5 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>创业必备服务</em><span class="xian right"></span></div>
+					<p>缔元智能财务助您快速创业</p>
+				</div>
+				<div class="index-ctbox2">
+				<ul class="clearfix">
+					<li>
+						<h1 class="tit">注册公司</h1>
+						<p class="">创业者精选服务，为您的企业发展助力</p>
+						<img class="icon" src="images/home-icon2.png" alt="">
+					</li>
+					<li>
+						<h1 class="tit">代理记账</h1>
+						<p class="">会计核算不健全，缔元智能财税解决您的记账问题</p>
+						<img class="icon" src="images/home-icon3.png" alt="">
+					</li>
+					<li>
+						<h1 class="tit">资质代办</h1>
+						<p class="">创业企业必备，高效安全，一步到位，超高性价比</p>
+						<img class="icon" src="images/home-icon4.png" alt="">
+					</li>
+					<li>
+						<h1 class="tit">知识产权</h1>
+						<p class="">商标服务、专利申请、版权登记、多项服务，专人全程跟进</p>
+						<img class="icon" src="images/home-icon4.1.png" alt="">
+					</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	
+		<!-- 服务优势 -->
+		<div class="w1200">
+			<div class="pubTitle center">
+				<div class="title fs30 center"><span class="xian left"></span><em>服务优势</em><span class="xian right"></span></div>
+				<p>实力说明一切</p>
+			</div>
+			<div class="indx-myService clearfix">
+				<div class="list left fl">
+					<div class="item flipInX animated">
+						<img class="arrow" src="images/home-icon6.png" >
+						<h1>我们的流程</h1>
+						<p>5分钟快速响应，互联网+标准化流程，简单快捷，科学高效，为企业保价护航</p>
+					</div>
+					<div class="item flipInX animated">
+						<img class="arrow" src="images/home-icon6.png" >
+						<h1>我们的承诺</h1>
+						<p>全程透明，服务产品化定制规范，全程监控跟踪业务，进度实时查询跟进</p>
+					</div>
+					<div class="item flipInX animated">
+						<img class="arrow" src="images/home-icon6.png" >
+						<h1>我们的售后</h1>
+						<p>定期进行质量跟踪服务，随时了解服务的办理情况，随时提供支持，根据需要，进行服务支持</p>
+					</div>
+				</div>
+				<div class="Mpic fl flipInX animated">
+					<img src="images/company-changes-icon17.png" >
+				</div>
+				<div class="list right fr">
+					<div class="item flipInX animated">
+						<img class="arrow" src="images/home-icon5.png" >
+						<h1>我们的经验</h1>
+						<p>年行业经验，已成功为23000多家公司免费注册公司，3000余家代账客户资源，数万家客户的选择，值得信赖</p>
+					</div>
+					<div class="item flipInX animated">
+						<img class="arrow" src="images/home-icon5.png" >
+						<h1>我们的实力</h1>
+						<p>服务人员均数年以上从业经验，10年以上会计68名，3年以上会计128名，均是业内顶尖人员，专业，放心</p>
+					</div>
+					<div class="item flipInX animated">
+						<img class="arrow" src="images/home-icon5.png" >
+						<h1>我们的服务</h1>
+						<p>专属淘钉一站式全程服务，业务范围广泛，满足各类不同业务办理需求</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pdb100"></div>
+	
+
+		<!-- 服务流程 -->
+		<div class="indx-servicebox center white">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>服务流程</em><span class="xian right"></span></div>
+					<p>科学的服务流程，严谨的服务态度，专业的服务内容，为您企业保驾护航</p>
+				</div>
+				<div>
+					<ul class="clearfix">
+						<li v-for="(item,index) in indshareLis" :key="index">
+							<img class="icon" :src="item.iconUrl" alt="">
+							<h1>{{item.title}}<img class="dian" :src="item.dian" ></h1>
+							<p v-for="(child,index) in item.text" :key="index">{{child}}</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<!-- 资讯动态 -->
+		<div class="w1200">
+			<div class="pubTitle center">
+				<div class="title fs30 center"><span class="xian left"></span><em>资讯动态</em><span class="xian right"></span></div>
+				<p>您想要的都在这里，咨询就解决</p>
+			</div>
+			<div class="ind-information pdb100">
+				<ul class="clearfix">
+					<li v-for="(item,index) in newsData" :key="index">
+						<a href="#">
+							<div class="pic">
+								<img src="images/home-img3.jpg" >
+							</div>
+							<div class="infor">
+								<h1 class="avoidOverflow">嘉泽财务位居金融产业</h1>
+								<p class="fs12 color9">2019/12/25</p>
+								<p class="text avoidOverflow2">坐拥互联网+金融行业蓬勃行业兴起之天时，区域金融产业发达之地利人和</p>
+								<div class="clearfix">
+									<img class="arrow" src="images/home-icon14.png" >
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	
+		<!-- 合作伙伴 -->
+		<div class=" pdb100 ind_partners">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>合作伙伴</em><span class="xian right"></span></div>
+					<p>强强联手，缔元智能财税助您创业</p>
+				</div>
+				<div>
+					<ul class="clearfix">
+						<li  v-for="(item,index) in partnerData" :key="index"><img :src="item" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<include src="footer.html"></include>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		var app = new Vue({
+		    el: '#app',
+		    data:function(){
+		        return {
+		        	banner_index:0,
+		        	is_toggle:false,
+					is_show:false,
+					wx_show:2,
+					fiveCard:[
+						{title:"餐饮服务许可证",price:"3500"},
+						{title:"有限责任公司注册",price:"1000"},
+						{title:"普通商标注册",price:"1200"},
+						{title:"小规模纳税人代账",price:"1200"},
+						{title:"食品营业许可证",price:"1200"}
+					],
+					advantage:[
+						//服务优势
+						{
+							num:"01",
+							title:"我们的经验",
+							infor:"年行业经验，已成功为23000多家公司免费注册公司，3000余家代账客户资源，数万家客户的选择，值得信赖；"
+						},
+						{
+							num:"02",
+							title:"我们的实力",
+							infor:"服务人员均数年以上从业经验，10年以上会计68名，3年以上会计128名，均是业内顶尖人员，专业，放心；"
+						},
+						{
+							num:"03",
+							title:"我们的服务",
+							infor:"专属淘钉一站式全程服务，业务范围广泛，满足各类不同业务办理需求；"
+						},
+						{
+							num:"04",
+							title:"我们的售后",
+							infor:"定期进行质量跟踪服务，随时了解服务的办理情况，随时提供支持，根据需要，进行服务支持。"
+						},
+						{
+							num:"05",
+							title:"我们的承诺",
+							infor:"全程透明，服务产品化定制规范，全程监控跟踪业务，进度实时查询跟进；"
+						},
+						{
+							num:"06",
+							title:"我们的流程",
+							infor:"5分钟快速响应，互联网+标准化流程，简单快捷，科学高效，为企业保价护航。"
+						}
+					],
+					indshareLis:[ //服务流程
+						{
+							iconUrl:"images/home-icon7.png",
+							title:"在线咨询",
+							dian:'images/home-icon12.png',
+							text:["咨询客户","400电话","需求分析","分配对接"]
+						},
+						{
+							iconUrl:"images/home-icon8.png",
+							title:"商务咨询",
+							dian:'images/home-icon13.png',
+							text:["私人订制","介绍业务","详谈巨细"]
+						},
+						{
+							iconUrl:"images/home-icon9.png",
+							title:"签订合同",
+							dian:'images/home-icon13.png',
+							text:["资料收集","填写信息","签订合同"]
+						},
+						{
+							iconUrl:"images/home-icon10.png",
+							title:"业务办理",
+							dian:'images/home-icon11.png',
+							text:["立即办理","进度告知","完成服务"]
+						},
+						{
+							iconUrl:"images/home-icon11.1.png",
+							title:"售后服务",
+							dian:'images/home-icon13.png',
+							text:["全程跟踪","客户回访","服务评价"]
+						}
+					],
+					//资讯动态
+					newsData:[{},{},{}],
+					indxLastbox:[
+						{
+							iconUrl:"images/home-icon7.png",
+							title:"顾问团队",
+							text:["资深顾问团队","严格监督把控流程"]
+						},
+						{
+							iconUrl:"images/home-icon8.png",
+							title:"高效快捷",
+							text:["全天快速响应，流程简单","办理进度实时推送"]
+						},
+						{
+							iconUrl:"images/home-icon9.png",
+							title:"平台保障",
+							text:["专业顾问","一站式一对一服务"]
+						},
+						{
+							iconUrl:"images/home-icon10.png",
+							title:"性价比高",
+							text:["价格公开透明","引领业界良好口碑"]
+						},
+						{
+							iconUrl:"images/home-icon11.1.png",
+							title:"安全保障",
+							text:["客户信息保密防泄露","省时省心，让您信赖选择"]
+						}
+					],
+					partnerData:[
+						'images/home-img4.png','images/home-img5.png',
+						'images/home-img6.png','images/home-img7.png',
+						'images/home-img8.png','images/home-img9.png',
+						'images/home-img10.png','images/home-img11.png',
+					]
+		        }
+		    },
+		    created:function () {
+				 var self = this;
+				 
+				 self.getMainData();	
+		    },
+		    methods: {
+		    	getMainData: function(id) {
+		    		var self = this;
+		    		var callback = function(res) {
+		    			console.log('getMainData', res);
+		    			self.mainData.push.apply(self.mainData, res.info.data);
+		    			for (var i = 0; i < self.mainData.length; i++) {
+		    				self[self.mainData[i].title] = self.mainData[i];
+		    			};
+		    			console.log(self[''])
+		    			
+		    		};
+		    		console.log('self.mainData', self.mainData)
+		    	},
+		    
+		    }
+		});
+	</script>
+</html>

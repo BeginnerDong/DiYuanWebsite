@@ -1,0 +1,127 @@
+<footer id="footer_app">
+	<div class="w1200 clearfix">
+		<div class="leftNav">
+			<ul class="clearfix">
+				<li v-for="(item,index) in footeLink" >
+					<h1>{{item.title}}</h1>
+					<div class="link" v-for="(child,index) in item.text">
+						<a href="#">{{child}}</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="rightTime oh">
+			<p class="tit white">全国客服热线：</p>
+			<h1 class="white">{{phone}}</h1>
+			<p class="pdt5">工作时间：9：00-21：00</p>
+			<div class="clearfix">
+				<span class="kefuBtn"><img src="images/dailijizhang-icon18.png" >在线客服</span>
+			</div>
+		</div>
+	</div>
+	
+</footer>
+<script type="text/javascript">
+	var footer_app = new Vue({
+	    el: '#footer_app',
+	    data:function(){
+	        return {
+	        	is_toggle:false,
+				qrImg:[],
+				footeLink:[
+					{
+						title:"关于我们",
+						text:["关于我们","联系我们","加入我们","帮助我们","网站标签"]
+					},
+					{
+						title:"服务支持",
+						text:["投诉建议","常见问题"]
+					},
+					{
+						title:"售后服务",
+						text:["售后服务政策","全部服务网点"]
+					},
+					{
+						title:"关于我们",
+						text:["工商服务","财税服务","资质代办","知识产权","高级财税"]
+					}
+				],
+				phone:'029-8965-1236'
+	        }
+	    },
+	    created:function () {
+	        var self = this;
+			self.getMainData()
+	        
+			
+	    },
+	    methods: {
+			
+			getMainData: function(id) {
+				var self = this;
+				var postData = {};
+				postData.searchItem = {
+					thirdapp_id:2,
+					title:'联系我们'
+				};
+				postData.getAfter = {
+					child: {
+						tableName: 'Label',
+						middleKey: 'id',
+						key: 'parentid',
+						searchItem: {
+							status: 1,
+						},
+						condition: '='
+					},
+				};
+
+				var callback = (res) => {
+					console.log('getMainData', res);
+					self.mainData = res.info.data[0];
+					for (var i = self.mainData['child'].length - 1; i >= 0; i--) {
+						
+						if(self.mainData['child'][i].title=="地址"){
+							self.address = self.mainData['child'][i].description
+						};
+						if(self.mainData['child'][i].title=="电话"){
+							self.phone = self.mainData['child'][i].description
+						};
+						if(self.mainData['child'][i].title=="二维码"){
+							self.qrImg = self.mainData['child'][i].mainImg
+						};
+					}
+
+				};
+				// window.base.labelGet(postData, callback);
+			},
+	        
+	    	
+	    }
+	});   
+</script>
+<style type="text/css">
+	/* 页脚*/
+	footer{background: #2e3238;padding: 50px 0;color: #abadaf;}
+	footer .leftNav{width: 70%;float: left;}
+	footer .leftNav ul li{width: 25%;float: left;box-sizing: border-box;border-right: 1px solid #666;padding: 0 3%;text-align: center;padding-bottom: 15px;min-height: 240px;}
+	footer .leftNav ul li h1{font-size:16px;line-height: 30px;padding-bottom: 15px;color: #fff;}
+	footer .leftNav li .link a{font-size: 14px;color: #c1c1c1;line-height: 36px;display: block;width: 100%;}
+	footer .leftNav li .link a:hover{color: #fff;}
+	footer .rightTime{width: 30%;float: right;box-sizing: border-box;padding-left: 5%;}
+	footer .rightTime .tit{font-size: 16px;padding-bottom: 30px;line-height: 30px;}
+	footer .rightTime h1{font-size: 28px;line-height: 50px;}
+	footer .rightTime .kefuBtn{height: 40px;line-height: 40px;padding: 0 25px;background-color: #dc3a34;color: #fff; display: block;box-sizing: border-box;float: left;margin-top: 20px;}
+	footer .rightTime .kefuBtn img{width: 20px;height: 20px;display: inline-block;vertical-align: middle;margin-right: 5px;}
+	@media screen and (max-width:900px){
+		footer{padding: 20px 0 10px 0;}
+		footer .leftNav{width: 100%; text-align: center;}
+		footer .leftNav ul li h1{font-size: 14px;padding-bottom: 0;}
+		footer .leftNav li .link a{font-size: 12px; line-height: 24px;}
+		footer .rightTime{width: 100%;margin-top: 20px;border-top: 1px solid #666;padding-top: 10px;text-align: center;}
+		footer .rightTime .tit{font-size: 16px;padding-bottom: 0;}
+		footer .rightTime h1{font-size: 20px; line-height:34px;}
+		footer .rightTime p{padding-top:0px;font-size: 14px;}
+	}
+</style>
+

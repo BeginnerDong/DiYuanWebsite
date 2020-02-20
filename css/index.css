@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+
+
+/* 更多按钮*/
+.MdMorebtn{padding: 80px 0;}
+.MdMorebtn a{width: 150px;height: 44px;text-align: center;color: #10a2e4;border: 1px solid #10a2e4;display: block;margin: 0 auto;line-height: 44px;font-size: 16px;}
+.MdMorebtn a:hover{background: #10A2E4;color: #fff;}
+
+/* 首页-我要办理相关证*/
+.index_fiveCard li{width: 19%;box-sizing: border-box;padding: 50px 3% 0 50px;float: left;margin-right: 1.2%; color: #e19f15;background-color: #0d1829;}
+.index_fiveCard li:last-child{margin-right: 0;}
+.index_fiveCard li .title{display: table;margin: 0 auto;}
+.index_fiveCard li p{width: 22px;height: 200px;float: left;line-height: 22px;padding: 0 15px;-webkit-writing-mode: vertical-rl;writing-mode: vertical-rl;}
+.index_fiveCard li .p1{width: 24px;font-size: 20px;border-right: 1px solid #e19f15;}
+.index_fiveCard li .infor{margin-top: 30px;padding-bottom: 50px;}
+.index_fiveCard li .infor .btn{width: 100px;height: 36px;line-height: 36px;display: block;border: 1px solid #e19f15;margin: 0 auto;font-size: 15px;}
+.index_fiveCard li:nth-child(1){padding-bottom: 15px;}
+.index_fiveCard li:nth-child(2){padding-bottom: 130px;}
+.index_fiveCard li:nth-child(3){padding-bottom: 60px;background: url(../images/home-img.jpg) no-repeat left bottom/100% auto;}
+.index_fiveCard li:nth-child(4){padding-bottom: 110px;}
+.index_fiveCard li:nth-child(5){padding-bottom: 15px;}
+.index_fiveCard li:hover{background:#C51114;color: #fff;}
+.index_fiveCard li:hover .infor .btn{ color: #fff;border:1px solid #fff;}
+.index_fiveCard li:hover .p1{border-right-color: #fff;}
+/* 创业必备服务*/
+.index-ctbox2 li{float: left;width: 23%;height: 150px;background: #fff;box-sizing: border-box;padding: 20px;position: relative;border-radius: 5px;margin-top: 10px;margin-right: 2.6%;}
+.index-ctbox2 li:last-child{margin-right: 0;}
+.index-ctbox2 li .tit{display: block;font-size: 16px;line-height: 30px;position: relative;margin-bottom: 30px;}
+.index-ctbox2 li .tit::after{content: "";width: 30px;height: 3px;background: #C51114;position: absolute;bottom: -3px;left: 0;}
+.index-ctbox2 li .icon{width: 30px;height: 30px;display: block;position: absolute;right: 20px;top: 25px;}
+
+/* 服务优势*/
+.indx-myService .list{width: 33.3%;padding-right: 120px;box-sizing: border-box; }
+.indx-myService .list .item{position: relative;text-align: right;padding-bottom: 30px;}
+.indx-myService .list .item:last-child{padding-bottom: 0;}
+.indx-myService .list .arrow{position: absolute;top:5px;right: -120px;width: 110px;height: 72px; display: block;}
+.indx-myService .list.right{padding-left: 120px;padding-right: 0;}
+.indx-myService .list.right .item{text-align: left;}
+.indx-myService .list.right .arrow{left: -120px;right: auto;}
+.indx-myService .list .item h1{font-size: 18px;padding-bottom: 10px;font-weight: bold;}
+.indx-myService .list .item p{height: 72px;}	
+.indx-myService .Mpic{width: 33.3%; text-align: center; vertical-align: middle;} 
+.indx-myService .Mpic img{width: 90%;height: auto; display: block;margin: 0 auto;}
+
+
+/* 首页-服务流程*/
+.indx-servicebox{background: url(../images/home-img2.jpg) repeat;padding-bottom: 60px;}
+.indx-servicebox li{width: 20%;float: left;padding-top: 30px;position: relative;}
+.indx-servicebox li .number{font-size: 50px;line-height: 40px;position: absolute;left: 65%;top: 0;}
+.indx-servicebox li .icon{width: 45px;height: 45px;display: block;margin: 0 auto;}
+.indx-servicebox li h1{font-size: 18px;line-height: 24px;margin:30px 0 20px 0;position: relative;}
+.indx-servicebox li h1::after{content: '';width: 30%;height: 1px;background: #e19f15;position: absolute;right: 0;top: 11px;}
+.indx-servicebox li h1::before{content: '';width: 30%;height: 1px;background: #e19f15;position: absolute;left: 0;top: 11px;}
+.indx-servicebox li h1 .dian{position: absolute;top:3px;left: 96.5%;width: 18px;height: 18px;}
+.indx-servicebox li p{font-size: 14px;line-height: 30px;}
+.indx-servicebox li p::before{content: "-";margin-right: 3px;}
+.indx-servicebox li:first-child h1::before{width: 0;}
+.indx-servicebox li:last-child h1::after{width: 0;}
+.indx-servicebox li:last-child h1 .dian{display: none;}
+
+/* 资讯动态*/
+.ind-information li{float: left;width: 30%;position: relative;box-sizing: border-box;margin-right: 5%;}
+.ind-information li:last-child{margin-right: 0;}
+.ind-information li .pic{width: 100%;height:252px ;}
+.ind-information li .pic img{width: 100%;height: 100%;}
+.ind-information li .infor{padding: 15px 4%;border: 1px solid #ddd;box-sizing: border-box;border-top: 0;}
+.ind-information li h1{font-size:16px;margin-bottom: 5px;font-weight: bold;}
+.ind-information li .text{font-size: 13px;line-height: 20px;height: 40px;margin: 10px 0 15px 0;}
+.ind-information li .arrow{width: 25px;height: 10px; display: block;}
+
+/* 合作伙伴*/
+.ind_partners{background: url(../images/home-img12.jpg) no-repeat 0 0/100% 100%;}
+.ind_partners ul li{float: left;width: 264px;margin-right: 4%;height: 132px;margin-top: 30px;background: #fff;box-shadow: 0 0 5px rgba(153, 153, 153, 0.2);}
+.ind_partners ul li:nth-of-type(4n){margin-right: 0;}
+.ind_partners ul li img{width: 100%;height: 100%;display: block;}
+
+
+/******************* 以下自适应样式 *******************/
+@media only screen and (max-width: 1050px){
+	.indx-myService .list{padding-right: 50px;}
+	.indx-myService .list .item{padding-bottom: 40px;}
+	.indx-myService .list .arrow{width: 80px;height: 78px;right: -90px;}
+	.indx-myService .list.right{padding-left: 50px;}
+	.indx-myService .list.right .arrow{left: -90px;}
+	.indx-myService .Mpic{margin-top: 6%;}
+}
+
+@media only screen and (max-width: 500px){
+	.indx-myService{padding: 0;}
+	.indx-myService .Mpic{width: 30%;margin-top: 50px;}
+	.indx-myService .list{width: 35%;padding-right: 0px;}
+	.indx-myService .list .icon{width: 16px;height: 16px;top: 3px;}
+	.indx-myService .list .arrow{width: 60px;height: 43px;right: -60px;}
+	.indx-myService .list .item{padding-right: 20px;padding-bottom: 20px;}
+	.indx-myService .list .item h1{font-size: 14px;padding-bottom: 5px;}
+	.indx-myService .list .item p{font-size: 10px;line-height: 18px;}
+	.indx-myService .list.right .arrow{left: -60px;}
+	.indx-myService .list.right{padding-left: 0;}
+	.indx-myService .list.right .item{padding-left: 20px;}	
+}

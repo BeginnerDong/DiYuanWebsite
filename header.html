@@ -1,0 +1,130 @@
+
+<div id="header_app" class="pubHeader">
+	<div class="head-fixH">
+		<div class="indNavbar pr white oh">
+			<div class="leftLogo fl">
+				<div class="logo fl">
+					<img src="images/home-logo.png">
+				</div>
+				<div class="text fl">
+					<img src="images/home-icon.png" >
+					<span>18092651095</span>
+				</div>
+			</div>
+			<div class="fr rightNav">
+				<div class="list">
+					<ul class="oh">
+						<li :class="currentUrl=='/index.html'?'on':''">
+							<a href="index.html">首页</a>
+						</li>
+						<li :class="currentUrl=='/companyRegister.html'?'on':''">
+							<a href="companyRegister.html">公司注册</a>
+						</li>
+						<li :class="currentUrl=='/#'?'on':''">
+							<a href="#">代理记账</a>
+						</li>
+						<li :class="currentUrl=='/#'?'on':''">
+							<a href="#">资质代办</a>
+						</li>
+						<li :class="currentUrl=='/#'?'on':''">
+							<a href="#">知识产权</a>
+						</li>
+						<li :class="currentUrl=='/#'?'on':''">
+							<a href="#">公司变更</a>
+						</li>
+						<li :class="currentUrl=='/#'?'on':''">
+							<a href="#">注册公司</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="navBtn center" @click="topNavBtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<div class="headH"></div>
+</div>
+
+
+
+<script type="text/javascript">
+
+	var header_app = new Vue({
+	    el: '#header_app',
+	    data:function(){
+	        return {
+	        	is_toggle:false,
+				shownav:true,
+				currentUrl:''
+	        }
+	    },
+	    created:function () {
+	        var self = this;
+			var currentUrl = window.base.GetUrlRelativePath();
+		
+			var reg = /\/([^\/]+)\.html/i;
+			if(reg.exec(currentUrl)&&reg.exec(currentUrl)[0]){
+				self.currentUrl = reg.exec(currentUrl)[0];
+			}else{
+				self.currentUrl = '/index.html';
+			};
+			console.log('self.currentUrl',self.currentUrl)
+	    },
+	    methods: {
+			topNavBtn:function(){
+				if($(".rightNav").css('display')=='none'){
+					$(".rightNav").show()
+				}else{
+					$(".rightNav").hide()
+				}
+			}
+	    }
+	});   
+</script>
+
+<style>
+ /*网站导航*/
+.pubHeader{width: 100%;}
+.indNavbar{line-height: 60px;}
+.indNavbar .logo{ width:auto; height:60px; display: block;background-color: #c51114;text-align: center;}
+.indNavbar .logo img{vertical-align: middle; display: block;width: auto;height: 40px;padding:10px 25px;}
+.leftLogo .text{padding: 0 20px;}
+
+.leftLogo .text img{width:25px; height:25px;display: inline-block; vertical-align: middle;margin-right: 5px; }
+
+.indNavbar .rightNav{margin-right:5%;}
+.indNavbar .list{box-sizing: border-box;}
+.indNavbar .list li{float: left;box-sizing: border-box;}
+.indNavbar .list li a{ display: block; padding: 0 20px; font-size: 16px;color: #fff;}
+.indNavbar .list li.on a{background: #c51114;}
+.indNavbar .navBtn{ width: 36px; height: 36px;position: absolute; right: 10px; top:50%; transform: translateY(-50%);z-index: 66; display: none;background: rgba(0,0,0,0.6);border-radius: 5px;color: #fff;padding: 5px 10px;box-sizing: border-box;}
+.indNavbar .navBtn span{display: block;width: 100%;box-sizing: border-box;height: 1px;background: #fff;margin-top:6px ;}
+
+
+
+.head-fixH{width: 100%;background-color: #222; position: fixed;top: 0;left: 0;right:0; z-index: 66;box-shadow: 0 0 8px rgba(0,0,0,0.1);}
+.headH{height: 60px;}
+@media screen and ( max-width: 1100px){ 
+	.headH{height: 50px;}
+	.indNavbar .logo{ width: auto; height: 50px;}
+	.indNavbar .logo img{height: 30px;width: auto;padding: 10px 15px;}
+	.leftLogo .text img {width: 20px;height: 20px;}
+	.indNavbar{line-height: 50px;}
+	.indNavbar .list{width: 100%;}
+	.indNavbar .navBtn{ display: block;}
+	.leftLogo .text{font-size: 13px;padding: 0 10px;}
+	.indNavbar .rightNav{ display: none;width: 100%;position: fixed;top: 50px; left: 0; right: 0;z-index: 66; padding: 0;background: rgb(0,0,0,0.8);box-sizing: border-box;padding-bottom: 0;border-top: 1px solid #dc8787;}
+	.indNavbar .list li{width: 100%;}
+	.indNavbar .list li a{width: 100%;font-size: 16px;padding-bottom: 0;box-sizing: border-box;line-height: 50px;text-align: center;}
+	.indNavbar .list li.on a{font-weight: bold;}
+}
+
+
+
+
+</style>
+
