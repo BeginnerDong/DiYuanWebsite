@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>知识产权</title>
+		<script src="./js/vue.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/property.css">
+	</head>
+
+<body>
+	<div id="app">
+		<!-- 网站导航 -->
+		<div class="pubHeader">
+			<include src="header.html"></include>
+		</div>
+		
+		<div class="pubHeadBanner">
+			<include src="headBanner.html"></include>
+		</div>
+		
+		<!-- 极致服务 -->
+		<div class="propertyBox1">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>极致服务</em><span class="xian right"></span></div>
+					<p>业内领先的知识产权注册平台</p>
+				</div>
+				<div class="cont">
+					<img src="images/chanquan-icon.png" >
+				</div>
+			</div>
+		</div>
+		
+		<!-- 我们的服务 -->
+		<div class="propertyBox2">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>我们的服务</em><span class="xian right"></span></div>
+					<p>全程一站式知识产权注册平台</p>
+				</div>
+				<div class="clearfix center white">
+					<div class="item" v-for="(item,index) in bookLis" :key="index">
+						<img class="icon" :src="item.iconUrl" alt="">
+						<h1>{{item.title}}</h1>
+						<p>{{item.text}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 服务优势 -->
+		<div class="propertyBox3 pdb100 oh">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>服务优势</em><span class="xian right"></span></div>
+					<p>你的专利，我们贴心保障</p>
+				</div>
+				<div class="">
+					<ul class="clearfix">
+						<li class="left">
+							<span style="background: #fd5f5f;">价格</span>
+							<span style="background: #46d36b;">办证时间</span>
+							<span style="background: #5fa5fd;">服务</span>
+							<span style="background: #ffae13;">团队</span>
+						</li>
+						<li class="middle">
+							<h1>缔元智能财税知识产权</h1>
+							<p><em>明码标价，价格透明</em></p>
+							<p><em>严格按照承诺时间完成全部流程，将申请时间缩短</em></p>
+							<p><em>平台监管，随时处理服务质量问题</em></p>
+							<p><em>专业团队，快速高效，数百名专业顾问随时</em></p>
+						</li>
+						<li class="right">
+							<h1>其他知识产权公司</h1>
+							<p><em>价格混乱，需要用心甄别</em></p>
+							<p><em>正常情况下，提交材料颁发证书需要3-4个月</em></p>
+							<p><em>服务态度差，敢怒不敢言</em></p>
+							<p><em>缺少人手，增加沟通时间成本</em></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 及时申报服务 -->
+		<div class="propertyBox4 pdb100 bjgayf5">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>及时申报服务</em><span class="xian right"></span></div>
+					<p>产权注册，快人一步</p>
+				</div>
+				<div class="cont clearfix">
+					<div class="item">
+						<h1>无延时</h1>
+						<p >极速注册，无延时报送，抢先拿证，防止被注册</p>
+						<span class="btn">点击办理</span>
+					</div>
+					<div class="item">
+						<h1>高效可靠</h1>
+						<p>及时申请，快速高效即时反馈；报送回执安全可靠</p>
+						<span class="btn">点击办理</span>
+					</div>
+					<div class="item">
+						<h1>成功率高</h1>
+						<p>缔元专业团队，确保下发受理通知书，提高注册成功率</p>
+						<span class="btn">点击办理</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 分析服务 -->
+		<div class="propertyBox5">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>分析服务</em><span class="xian right"></span></div>
+					<p>有效提高成功率</p>
+				</div>
+				<div class="cont clearfix center">
+					<div class="item">
+						<img class="icon" src="images/chanquan-icon10.png" >
+						<h1>免费查询</h1>
+						<p>30秒快速反馈查询结果</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/chanquan-icon11.png" >
+						<h1>双重检索</h1>
+						<p>严格把关，降低注册风险</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/chanquan-icon12.png" >
+						<h1>多种解决方案</h1>
+						<p>提高注册成功率</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/chanquan-icon13.png" >
+						<h1 class="">一对一专属顾问</h1>
+						<p>7x24小时提供专业解答</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 随时通知 -->
+		<div class="propertyBox6 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>随时通知</em><span class="xian right"></span></div>
+					<p>随时随地掌握办理信息</p>
+				</div>
+				<div class="cont clearfix center">
+					<div class="item">
+						<img class="icon" src="images/chanquan-img1.png"/>
+						<h1>服务流程节点透明，办理状态实时跟踪</h1>
+						<p>采用专业软件APP、短信、微信、QQ等多种方式，及时通知客户服务进程，及相关事宜</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/chanquan-img1.png" >
+						<h1>随时监测注册动态，异常情况及时通知</h1>
+						<p>缔元财税沿用自主研发的管理软件，与之数据库同步，跟踪监测，一有状况随即告知</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/chanquan-img1.png" >
+						<h1 class="">服务流程节点透明，办理状态实时跟踪</h1>
+						<p>重要文件重点通知，极速寄送安全到家</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 售后服务 -->
+		<div class="propertyBox7 pdb100 bjgayf5">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>售后服务</em><span class="xian right"></span></div>
+					<p>随时随地掌握办理信息</p>
+				</div>
+				<div class="bigTit center white pubbj">免费终身享受售后服务</div>
+				<div class="cont clearfix center">
+					<div class="item" v-for="(item,index) in shouhouData" :key="index">
+						<h1>{{item.title}}</h1>
+						<div class="M">
+							<img class="icon" :src="item.iconUrl"/>
+							<p>{{item.text}}</p>
+						</div>
+						<div class="btn">立即咨询</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 缔元财税，专业顾问，一站式一对一服务 -->
+		<include src="questionSubmit.html"></include>
+		
+		<!-- 页脚 -->
+		<include src="footer.html"></include>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		var app = new Vue({
+		    el: '#app',
+		    data:function(){
+		        return {
+		        	is_toggle:false,
+					is_show:false,
+					wx_show:2,
+					bookLis:[
+						{
+							iconUrl:"images/chanquan-icon1.png",
+							title:"商标服务",
+							text:"品牌建设，开启创业之路"
+						},
+						{
+							iconUrl:"images/chanquan-icon2.png",
+							title:"专利申请",
+							text:"独占技术，保护创新成果"
+						},
+						{
+							iconUrl:"images/chanquan-icon3.png",
+							title:"版权登记",
+							text:'杜绝剽窃，维护权益创意'
+						}
+					],
+					// 售后服务
+					shouhouData:[
+						{
+							title:"免费品牌推广",
+							iconUrl:"images/chanquan-icon14.png",
+							text:"公司推出免费品牌推广服务，为企业量身定制推广方案"
+						},
+						{
+							title:"免费查询",
+							iconUrl:"images/chanquan-icon15.png",
+							text:"只要输入名称，便可查到办理进度及相关状态"
+						},
+						{
+							title:"免费建立终身档案",
+							iconUrl:"images/chanquan-icon17.png",
+							text:"建立信息终身档案，提供完善信息备份，进行整合式管理"
+						},
+						{
+							title:"享受售后服务",
+							iconUrl:"images/chanquan-icon18.png",
+							text:"免费检测服务，提供知识产权保护咨询建议"
+						}
+					]
+		        }
+		    },
+		    created:function () {
+				 var self = this;
+				 window.base.bus.$emit('to_contentTwo',{paginate:self.paginate});
+				 self.getMainData();	
+		    },
+		    methods: {
+		        
+				getMainData: function(id){
+				    var self = this;
+				    var postData = {};
+					//postData.paginate = window.base.cloneForm(self.paginate);
+				    postData.searchItem = {
+						thirdapp_id:2
+					};	
+				    var callback = function(res){
+				        console.log('getMainData', res);
+				        self.qaData.push.apply(self.qaData,res.info.data)   
+				    };
+					console.log('self.qaData',self.qaData)
+				    window.base.labelGet(postData, callback);
+				}
+				
+		    }
+		});
+	</script>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>代理记账</title>
+		<script src="./js/vue.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/agent.css">
+	</head>
+
+<body>
+	<div id="app">
+		<!-- 网站导航 -->
+		<div class="pubHeader">
+			<include src="header.html"></include>
+		</div>
+		
+		<div class="pubHeadBanner">
+			<include src="headBanner.html"></include>
+		</div>
+		
+		<!-- 选择缔元 -->
+		<div class="agentbkBox1 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>选择缔元</em><span class="xian right"></span></div>
+					<p>自成立已服务50000+家客户</p>
+				</div>
+				<div class="clearfix">
+					<div class="item">
+						<img class="icon" src="images/dailijizhang-icon.png" >
+						<h1 class="name">规模大</h1>
+						<p class="text">服务人员均是数年以上从业经验，代账服务繁多，10年以上会计68名，3年以上会计128名</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/dailijizhang-icon1.png" >
+						<h1 class="name">地域广</h1>
+						<p class="text">服务网点：遍布全国西安、宝鸡、长沙、郑州、武汉、石家庄等多个城市</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/dailijizhang-icon2.png" >
+						<h1 class="name">行业宽</h1>
+						<p class="text">客户行业类别涵盖制造、金融、商业房地产、机械、电子、建材、交通运输、餐饮、文化、计算机等多个行业</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 代理优势 -->
+		<div class="agentbkBox2 bjgayf5 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>代理优势</em><span class="xian right"></span></div>
+					<p>实力说明一切</p>
+				</div>
+				<div class="cont clearfix">
+					<div class="left fl">
+						<div class="title">其他公司</div>
+						<div class="infor color6">
+							<p  v-for="(item,index) in otherAdvtgData" :key="index"><span>{{item}}</span></p>
+						</div>
+					</div>
+					<div class="right fr">
+						<div class="title">缔元财税</div>
+						<div class="infor">
+							<div class="item" v-for="(item,index) in ourAdvtgData" :key="index">
+								<div class="icon">
+									<img :src="item.iconUrl" >
+								</div>
+								<div class="cont">
+									<h1>{{item.title}}</h1>
+									<p>{{item.text}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 报税流程 -->
+		<div class="agentbkBox3">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>记账报税流程</em><span class="xian right"></span></div>
+					<p>在缔元记账报税，每月资深会计做账票据，您身边的财税专家</p>
+				</div>
+				<div class="clearfix center white">
+					<div class="item" v-for="(item,index) in bookLis" :key="index">
+						<h2 class="number">{{item.number}}</h2>
+						<img class="icon" :src="item.iconUrl" alt="">
+						<h1>{{item.title}}</h1>
+						<p>{{item.text}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="w1200 pdb100 agentbkBox4">
+			<div class="pubTitle center">
+				<div class="title fs30 center"><span class="xian left"></span><em>不包税后果</em><span class="xian right"></span></div>
+				<p>开启首次记账报税</p>
+			</div>
+			<div class="clearfix">
+				<div class="item">
+					<p>企业成立后，微机室申报根据《税收征管法》第62条规定：“纳税人未按照规定的期限办理纳税申报和报送纳税资料，或者扣缴义务人未按照规定期限向税务机关报送代扣代缴、代收代缴税款报告表和有关资料，由税务机关责令限期改正，处2000元以下的罚款；情节严重的，处2000元以上1万元以下的罚款”</p>
+				</div>
+				<div class="item">
+					<img class="pic" src="images/dailijizhang-img1.png" >
+				</div>
+				<div class="item">
+					<p>企业不进行纳税申报，不缴或者少缴应纳税款根据《税收征管法》第64条规定，追究其法律责任：“由税务机关追缴其不缴或者少缴税款、滞纳金并处不缴或者少缴的税款50%以上5培以下罚款”</p>
+				</div>
+				<div class="item">
+					<p>企业拒不进行纳税申报纳税人经税务机关通知申报而拒不申报没税务机关依据新《税收征管法》第63条的规定按偷税追究纳税人的法律责任</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 常见问题 -->
+		<include src="CommonProblem.html"></include>
+		
+		<!-- 缔元财税，专业顾问，一站式一对一服务 -->
+		<include src="questionSubmit.html"></include>
+		
+		<!-- 页脚 -->
+		<include src="footer.html"></include>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		var app = new Vue({
+		    el: '#app',
+		    data:function(){
+		        return {
+		        	banner_index:0,
+		        	is_toggle:false,
+					is_show:false,
+					wx_show:2,
+					otherAdvtgData:[
+						"价格在200-1000元不等，根据不同的行业，票据量，区域等进行讨论还价",
+						"除了正常做账费用外，期间隐形收费多，低价吸引客户，中间找各种理由收取费用，防不胜防",
+						"使用非正版财务软件，财务数据很难有保障，风险随时会降临",
+						"因会计工作失职出现报税错税，或漏水报税导致产生罚款，或逾期，由企业自行承担，没有安全保障"
+					],
+					ourAdvtgData:[
+						{
+							iconUrl:"images/dailijizhang-icon6.png",
+							title:"超值实惠",
+							text:"官网明码标价，收费透明，无隐形收费，无限制区域行业税统一价格200元/月"
+						},
+						{
+							iconUrl:"images/dailijizhang-icon8.png",
+							title:"明码标价",
+							text:"签订记账合同，明码标价，期间无任何其他收费用产生"
+						},
+						{
+							iconUrl:"images/dailijizhang-icon9.png",
+							title:"财务软件",
+							text:"使用正版财务软件，并且配置高性能的专业服务器，记账速度快，并且数据安全保障"
+						},
+						{
+							iconUrl:"images/dailijizhang-icon10.png",
+							title:"承担赔付",
+							text:"缔元财税郑重承诺，如因会计失职造成税方面的责任（补税和罚款）我公司无条件全额赔付"
+						}
+					],
+					//记账流程
+					bookLis:[ 
+						{
+							number:"01",
+							iconUrl:"images/dailijizhang-icon13.png",
+							title:"搜集票据",
+							text:"每月5号前手机上个月做账的发票"
+						},
+						{
+							number:"02",
+							iconUrl:"images/dailijizhang-icon14.png",
+							title:"会计记账",
+							text:'使用正版财务软件,保证财务数据安全性'
+						},
+						{
+							number:"03",
+							iconUrl:"images/dailijizhang-icon15.png",
+							title:"会计师审查",
+							text:"10年以上注册会计师审核把关让您的账目100%健康"
+						},
+						{
+							number:"04",
+							iconUrl:"images/dailijizhang-icon16.png",
+							title:"纳税申报",
+							text:"我们会在每月15日前按时报税如需缴税会在第一时间与您确认"
+						}
+					]
+					
+		        }
+		    },
+		    created:function () {
+				 var self = this;
+				 window.base.bus.$emit('to_contentTwo',{paginate:self.paginate});
+				 self.getMainData();	
+		    },
+		    methods: {
+		        
+				getMainData: function(id){
+				    var self = this;
+				    var postData = {};
+					//postData.paginate = window.base.cloneForm(self.paginate);
+				    postData.searchItem = {
+						thirdapp_id:2
+					};
+				    var callback = function(res){
+				        console.log('getMainData', res);
+				        self.qaData.push.apply(self.qaData,res.info.data)   
+				    };
+					console.log('self.qaData',self.qaData)
+				    window.base.labelGet(postData, callback);
+				}
+				
+		    }
+		});
+	</script>
+</html>

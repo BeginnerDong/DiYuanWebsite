@@ -20,7 +20,7 @@ a:link, a:visited {text-decoration: none; outline: none;}
 .clearfix{zoom:1;}
 
 .w{ width: 100%;}
-.w1200{ width: 1200px; margin:0 auto;}
+.w1200{ width: 1200px; margin:0 auto;box-sizing: border-box;}
 .fl{float: left;}
 .fr{float: right;}
 .pr{ position:relative}
@@ -193,12 +193,21 @@ a:link, a:visited {text-decoration: none; outline: none;}
 
 @media screen and (max-width: 1050px){
 	.w1200{width: 100%;padding: 0 3%;}
+	.pubTitle{padding: 40px 2% 25px 2%;}
+	.pubTitle .title{font-size: 20px;line-height: 26px;}
+	.pubTitle p{font-size: 14px;padding-top:5px;}
+	.pubTitle .title .xian{width: 36%;}
+	.pubTitle .title .xian::after{width: 40px;height: 26px;}
+	.pdb100{padding-bottom: 50px;}
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:500px){
 	.pdb100{padding-bottom: 30px;}
 	.pubTitle{padding: 30px 2% 15px 2%;}
-	.pubTitle .title{font-size: 18px;line-height: 26px;}
-	.pubTitle p{font-size: 14px;padding-top:5px;}
+	.pubTitle p{font-size: 13px;}
+	.pubTitle .title{font-size: 18px;}
+	.pubTitle .title .xian{width: 24%;}
+	.pubTitle .title .xian::after{width: 32px;height: 22px;}
+	.pdb100{padding-bottom: 30px;}
 }
 
 /* banner 各种屏幕自适应 */
@@ -220,13 +229,13 @@ a:link, a:visited {text-decoration: none; outline: none;}
 }
 @media only screen and (max-width: 768px){
 	.head-fixH{ background: rgba(64,83,153,1);}
-	.pubHeadBanner{height: 340px;}
+	.pubHeadBanner{height: 320px;}
 }
-@media only screen and (max-width: 500px){
-	.pubHeadBanner{height: 240px;}
-}
-@media only screen and (max-width:420px){
+@media only screen and (max-width: 414px){
 	.pubHeadBanner{height: 172px;}
+}
+@media only screen and (max-width:375px){
+	.pubHeadBanner{height: 156px;}
 }
 /* banner自适应 end */
 

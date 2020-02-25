@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>资质代办</title>
+		<script src="./js/vue.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/zizhi.css">
+	</head>
+	<style type="text/css">
+		.register_quest{background-color: #fff;}
+	</style>
+
+<body>
+	<div id="app">
+		<!-- 网站导航 -->
+		<div class="pubHeader">
+			<include src="header.html"></include>
+		</div>
+		
+		<div class="pubHeadBanner">
+			<include src="headBanner.html"></include>
+		</div>
+		
+		<div class="zizhiBox1 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>选择缔元</em><span class="xian right"></span></div>
+					<p>自成立已服务50000+家客户</p>
+				</div>
+				<div class="contain clearfix center">
+					<div class="item">
+						<h1>资质代办经验</h1>
+						<div class="infor">
+							<div class="number">5<em>天</em></div>
+							<p>5年资深行业各类资质代办经验。政策变化全掌握</p>
+						</div>
+					</div>
+					<div class="item">
+						<h1>高速极速代办</h1>
+						<div class="infor">
+							<div class="number">98<em>%</em></div>
+							<p>全程一站式资质服务，成功率高。首次通过率98%，二次通过率100%</p>
+						</div>
+					</div>
+					<div class="item">
+						<h1>资质代办经验</h1>
+						<div class="infor">
+							<div class="number">30<em>天</em></div>
+							<p>代办资质不同，具体服务时间也不同最快20-30工作日不等</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="zizhiBox2">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>代账优势</em><span class="xian right"></span></div>
+					<p>实力说明一切</p>
+				</div>
+				<div class="cont clearfix center white">
+					<div class="item" v-for="(item,index) in youshiData" :key="index">
+						<img class="icon" :src="item.iconURL" >
+						<h1>{{item.title}}</h1>
+						<p>{{item.text}}</p>
+						<div class="dian">···</div>
+						<div>
+							<span class="btn">点击办理</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 轻松拿证 -->
+		<div class="zizhiBox3 pdb100 pr">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>轻松拿证</em><span class="xian right"></span></div>
+					<p>如遇到任何问题，都可以拨打免费咨询电话：400-0394-4903</p>
+				</div>
+				<div class="cont center clearfix color9">
+					<div class="item">
+						<img class="icon" src="images/zizhi-icon7.png" >
+						<h1>预约咨询</h1>
+						<div class="">
+							<img class="arrow" src="images/zizhi-icon5.png" >
+						</div>
+						<p class="text">01.开始</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/zizhi-icon8.png" >
+						<h1>材料申报</h1>
+						<div class="">
+							<img class="arrow" src="images/zizhi-icon6.png" >
+						</div>
+						<p class="text">02</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/zizhi-icon9.png" >
+						<h1>提交办理</h1>
+						<div class="">
+							<img class="arrow" src="images/zizhi-icon6.png" >
+						</div>
+						<p class="text">03</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/zizhi-icon10.png" >
+						<h1>成功拿证</h1>
+						<div class="">
+							<img class="arrow" src="images/zizhi-icon4.png" >
+						</div>
+						<p class="text">04.完成</p>
+					</div>
+				</div>
+			</div>
+			<div class="Wxian"></div>
+		</div>
+		
+		<div class="bjgayf5 qualiftBox4">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>为什么来缔元</em><span class="xian right"></span></div>
+					<p>如遇到任何问题，都可以免费咨询电话：400-0394-4903</p>
+				</div>
+				<div class="">
+					<ul class="clearfix">
+						<li class="liImg one">
+							<img class="ctImg" src="images/zizhi-img2.png" />
+						</li>
+						<li class="left">
+							<h1>缔元智能财税</h1>
+							<p><em>资深专业申报人员，无需企业操心<br/>资质细节了解彻底，审批流畅</em></p>
+							<p><em>有效时间内高效完成效率，通过率高</em></p>
+							<p><em>常年积累，有着深厚的资源，稳妥</em></p>
+							<p><em>材料人员专人筹办，上门服务，省事</em></p>
+							<p><em>价格透明，无隐藏消费，全程不加额外费用</em></p>
+							<p><em>全程监控跟踪，业务进度时查询跟进</em></p>
+							<p><em>售后服务跟踪，无后顾之忧</em></p>
+						</li>
+						<li class="liImg two">
+							<img class="ctImg" src="images/zizhi-img2.png" />
+						</li>
+						<li class="right">
+							<h1>传统代办</h1>
+							<p><em>资质申请流程复杂，专业度高资质标准细节不清楚，审批反复</em></p>
+							<p><em>办理周期流程长，通过率低</em></p>
+							<p><em>审批部门环节多，找不到门路</em></p>
+							<p><em>资料准备要求高而且繁琐，费事</em></p>
+							<p><em>价格混乱，后期乱收费现象严重，防不胜防</em></p>
+							<p><em>服务进度不及时通知，出问题得不到解决</em></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 常见问题 -->
+		<include src="CommonProblem.html"></include>
+		
+		<!-- 缔元财税，专业顾问，一站式一对一服务 -->
+		<include src="questionSubmit.html"></include>
+		
+		<!-- 页脚 -->
+		<include src="footer.html"></include>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		var app = new Vue({
+		    el: '#app',
+		    data:function(){
+		        return {
+		        	is_toggle:false,
+					is_show:false,
+					wx_show:2,
+					youshiData:[
+						{
+							iconURL:'images/zizhi-icon.png',
+							title:'办理通过率高',
+							text:'餐饮、食品经销必备。最快40个工作日。'
+						},
+						{
+							iconURL:'images/zizhi-icon1.png',
+							title:'人力资源许可证',
+							text:'培训、招聘、劳务外包等必备。最快60个工作日。'
+						},
+						{
+							iconURL:'images/zizhi-icon2.png',
+							title:'劳务派遣许可证',
+							text:'劳务人员派遣、从事社保等必备。最快30个工作日。'
+						},
+						{
+							iconURL:'images/zizhi-icon3.png',
+							title:'进出口许可证',
+							text:'进出口商贸公司必备。最快15个工作日'
+						}
+					]
+		        }
+		    },
+		    created:function () {
+				 var self = this;
+				 window.base.bus.$emit('to_contentTwo',{paginate:self.paginate});
+				 self.getMainData();	
+		    },
+		    methods: {
+		        
+				getMainData: function(id){
+				    var self = this;
+				    var postData = {};
+					//postData.paginate = window.base.cloneForm(self.paginate);
+				    postData.searchItem = {
+						thirdapp_id:2
+					};	
+				    var callback = function(res){
+				        console.log('getMainData', res);
+				        self.qaData.push.apply(self.qaData,res.info.data)   
+				    };
+					console.log('self.qaData',self.qaData)
+				    window.base.labelGet(postData, callback);
+				}
+				
+		    }
+		});
+	</script>
+</html>

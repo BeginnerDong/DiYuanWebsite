@@ -1,0 +1,57 @@
+<div id="questionSubmit">
+	<div class="questionSubmit">
+		<h1>缔元财税，专业顾问，一站式一对一服务</h1>
+		<div class="inputBox clearfix">
+			<input class="input fl" type="text" value="" placeholder="请输入您的手机号，更多咨询我们陪您免费回电" />
+			<button class="submitBtn fr" type="submit">提交</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var questionSubmit = new Vue({
+	    el: '#questionSubmit',
+	    data:function(){
+	        return {
+	        	is_toggle:false
+	        }
+	    },
+	    methods: {
+			getMainData: function(id) {
+				var self = this;
+				var postData = {};
+
+				var callback = (res) => {
+					console.log('getMainData', res);
+					self.mainData = res.info.data[0];
+				};
+				// window.base.labelGet(postData, callback);
+			},
+	        
+	    	
+	    }
+	});   
+</script>
+<style type="text/css">
+	/* 一对一服务 */
+	.questionSubmit{background: url(images/dailijizhang-img2.jpg) no-repeat 0 0/100% 100%;padding: 80px 3%;}
+	.questionSubmit h1{text-align: center;font-size: 24px; color: #fff;}
+	.questionSubmit .inputBox{width: 500px;margin: 0 auto;padding-top: 50px;}
+	.questionSubmit .input{width: 75%;height: 50px;padding: 0 3%;box-sizing: border-box;}
+	.questionSubmit .submitBtn{width: 25%;height: 50px;line-height: 50px;text-align: center;padding: 0 5px;box-sizing: border-box;background: #C51114;color: #fff;font-size: 16px;}
+	
+	
+	@media screen and (max-width:900px){
+		.questionSubmit{background: url(images/dailijizhang-img2.jpg) no-repeat center top/auto 100%;padding: 50px 3%;}
+		.questionSubmit h1{font-size: 18px;}
+		.questionSubmit .inputBox{width: 80%;}
+	}
+	@media screen and (max-width:500px){
+		.questionSubmit{padding: 40px 3%;}
+		.questionSubmit h1{font-size: 16px;}
+		.questionSubmit .inputBox{width: 90%;padding-top: 30px;}
+		.questionSubmit .input{height: 44px;}
+		.questionSubmit .submitBtn{line-height: 44px;height: 44px;}
+	}
+</style>
+

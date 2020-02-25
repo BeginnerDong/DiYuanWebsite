@@ -1,0 +1,81 @@
+<div id="CommonProblem">
+	<div class="bjgayf5 register_quest pdb100">
+		<div class="w1200">
+			<div class="pubTitle center">
+				<div class="title fs30 center"><span class="xian left"></span><em>常见问题</em><span class="xian right"></span></div>
+				<p>您想问的都在这里</p>
+			</div>
+			<div class="">
+				<ul>
+					<li>
+						<span class="num">01</span>
+						<h1>我没有注册地址，听说虚拟地址可以注册公司，你们这里提供虚拟地址吗？</h1>
+						<p>当您不想花高额的租金写字楼，您可以用我们提供的虚拟地址来注册公司，我们提供的这些虚拟地址都是工商局备过案的，您可以放心使用。</p>
+					</li>
+					<li>
+						<span class="num">02</span>
+						<h1>注册100万的公司，需要一次交清吗？</h1>
+						<p>不用，2014年3月1日后，公司注册改革，注册资本从实缴改为认缴，也就说，你现在只需要拿出1元，即可注册。</p>
+					</li>
+					<li>
+						<span class="num">03</span>
+						<h1>认缴是随便写注册资本数额吗？</h1>
+						<p>公司认缴的出资额将通过“市企业信用信息网”向社会公式，因此，请股东在认缴出资时充分自身考虑所具备的投资能力，理性确定认缴金额。</p>
+					</li>
+					<li>
+						<span class="num">04</span>
+						<h1>我以前注册的公司被吊销了？能注册新公司吗？</h1>
+						<p>不行，被吊销后你会上工商和税务机关的黑名单，工商一般3年自动解除，税务必须缴纳罚款后才能解除。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var CommonProblem = new Vue({
+	    el: '#CommonProblem',
+	    data:function(){
+	        return {
+	        	is_toggle:false
+	        }
+	    },
+	    methods: {
+			getMainData: function(id) {
+				var self = this;
+				var postData = {};
+
+				var callback = (res) => {
+					console.log('getMainData', res);
+					self.mainData = res.info.data[0];
+				};
+				// window.base.labelGet(postData, callback);
+			}
+	    }
+	});   
+</script>
+<style type="text/css">
+
+	/* 常见问题 */
+	.register_quest li{padding: 20px 3% 20px 100px;box-sizing: border-box;margin: 30px auto 0 auto;position:relative;}
+	.register_quest li .num{font-size: 36px;line-height: 40px;color: #9f9f9f;position: absolute;top: 50%;left: 20px;transform: translateY(-50%);font-family: 'MicrosoftYaHeiLight';}
+	.register_quest li h1{font-size: 18px;line-height: 30px;padding-bottom: 10px;font-weight: bold;}
+	.register_quest li p{font-size: 15px;color: #666;line-height: 26px;}
+	.register_quest li p::before{content: "答：";}
+
+	@media screen and (max-width:900px){
+		.register_quest li{margin: 0;padding: 15px 0 15px 65px;}
+		.register_quest li .num{font-size: 30px;left: 10px;top:7px;transform: initial;}
+		.register_quest li h1{font-size: 16px;line-height: 24px;}
+		.register_quest li p{font-size: 14px;line-height: 24px;}
+	}
+	
+	@media screen and (max-width:500px){
+		.register_quest li{padding: 10px 0 10px 40px;}
+		.register_quest li .num{font-size: 24px;left: 0px;top:4px;}
+		.register_quest li h1{font-size: 14px;line-height: 22px; padding-bottom: 5px;}
+		.register_quest li p{font-size: 13px;line-height: 24px;}
+	}
+</style>
+

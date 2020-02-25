@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+/* 注销公司*/
+.logoutBox1 .cont{box-sizing: border-box;background: url(../images/zhuxiao-img.png) no-repeat 0 0 /100% 100%;}
+.logoutBox1 .item{width: 45%;padding: 30px;box-sizing: border-box; }
+.logoutBox1 .item .topTit{padding-left: 70px;position: relative;color: #C51114;margin-bottom: 20px;}
+.logoutBox1 .item .topTit .num{width: 55px;height: auto;display: block;position: absolute;top: 0;left: 0;}
+.logoutBox1 .item .topTit h1{font-size: 26px;line-height: 40px;margin-bottom: 5px;}
+.logoutBox1 .item .topTit h2{font-size: 18px;}
+.logoutBox1 .item p{font-size: 16px;color: #666;line-height: 30px;margin-bottom: 20px;position: relative;padding-left: 15px;}
+.logoutBox1 .item p:before{content: "";width: 5px;height: 5px;background: #10A2E4;border-radius: 50%;position: absolute;left: 0;top: 12px;}
+.logoutBox1 .item .TipsTex{font-size: 16px;line-height: 30px;color: #666;padding-top: 20px;border-top: 1px solid #e1e1e1;margin-top: 30px;}
+
+.logoutBox2 .item{width: 20%;float: left;box-sizing: border-box;}
+.logoutBox2 .item .icon{width: 60px;height: 60px;display: block;margin: 0 auto;}
+.logoutBox2 .item .xian{width: 100%;display: block;margin: 40px 0;border-bottom: 2px dashed #a2a2a2;position: relative;}
+.logoutBox2 .item .xian .yuan{width: 12px;height: 12px;border-radius: 50%;border: 2px solid #a2a2a2;background: #f5f5f5;display: block;position: absolute;top: -6px;left: 50%;transform: translateX(-50%);}
+.logoutBox2 .item h1{font-size: 18px;line-height: 24px;width: 70%;margin: 0 auto 20px auto;}
+.logoutBox2 .item p{font-size: 15px;color: #666;line-height: 30px;width: 70%;margin: 0 auto;}
+
+
+.logoutBox3{background: url(../images/home-img2.jpg) repeat;}
+.logoutBox3 .item{width: 16.6%;float: left;padding: 0 3%;box-sizing: border-box;margin-top: 30px;}
+.logoutBox3 .item .icon{width: 60px;height: 60px;display: block;margin: 0 auto;}
+.logoutBox3 .item h1{font-size: 18px;line-height: 24px;margin-top:30px;}
+
+.logoutBox4 ul{padding: 0 3%;}
+.logoutBox4 li{width: 70%;background: #fff;padding: 15px 40px 15px 60px;border-radius: 50px;line-height: 30px;font-size: 16px;color: #666;box-sizing: border-box;margin-top: 30px;position: relative;box-shadow: 0 0 8px rgba(0,0,0,0.15);}
+.logoutBox4 li em{width: 30px;height: 30px;line-height: 30px;border-radius: 50%;text-align: center;color: #fff;display: block;margin-right: 20px;position: absolute;top: 50%;left: 20px;transform: translateY(-50%);}
+.logoutBox4 li:nth-of-type(2){margin-left: 6%;}
+.logoutBox4 li:nth-of-type(3){margin-left: 12%;}
+.logoutBox4 li:nth-of-type(4){margin-left: 18%;}
+.logoutBox4 li:nth-of-type(5){margin-left: 24%;}
+.logoutBox4 li:nth-of-type(6){margin-left: 30%;}
+
+.logoutBox5{background: url(../images/zhuxiao-img3.jpg) no-repeat 0 0 /100% 100%;}
+.logoutBox5 li{width:18%;height: 250px;background: #fff;border-radius: 5px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);padding: 30px 20px;box-sizing: border-box;float: left;margin:30px 2.5% 0 0;}
+.logoutBox5 li:last-child{margin-right: 0;}
+.logoutBox5 li .num{font-size: 30px;color: #C51114;}
+.logoutBox5 li h1{margin: 30px 0 15px 0;font-size: 18px;}
+.logoutBox5 li p{font-size: 15px;color: #666;line-height: 26px;}
+
+.logoutBox6 .cont{padding-top: 40px;}
+.logoutBox6 .item{float: left;position: relative; font-size: 15px;margin-bottom:145px;width:16.6%;box-sizing: border-box;padding: 10px 2%;}
+.logoutBox6 .item:nth-child(2n){margin-bottom: 0;margin-top: 145px;}
+.logoutBox6 .item .icon{width: 80px;height: 80px;border-radius: 50%;display: block;margin: 0 auto;background: url(../images/zhuxiao-img2.jpg) no-repeat 0 0/100% 100%;color: #fff;box-sizing: border-box;padding: 10px;}
+.logoutBox6 .item .icon span{font-size: 18px;line-height: 46px;display: block;width: 100%;position: relative;}
+.logoutBox6 .item .icon span::before{content: '';width: 20px;height: 1px;background-color: #fff;position: absolute;left: 50%;bottom: 0;transform: translateX(-50%);}
+
+.logoutBox6 .item p{line-height: 24px;margin-top: 20px;font-size: 16px;}
+.logoutBox6 .item::after{content: '';width: 73%;height: 75px;background: url(../images/zhuxiao-icon11.png) no-repeat 0 0/100% 100%;position: absolute;top:100%;left: 50%;}
+.logoutBox6 .item:nth-child(2n)::after{background-image: url(../images/zhuxiao-icon12.png);top:auto;bottom: 100%;}
+.logoutBox6 .item:last-child::after{display: none;}
+
+
+/******************* 以下自适应样式 *******************/
+@media only screen and (max-width: 900px){
+	.logoutBox1 .cont{background: #fff;}
+	.logoutBox1 .item{width: 100%;padding: 0;margin-top: 20px;}
+	.logoutBox1 .item .topTit {padding-left: 55px; margin-bottom: 15px;}
+	.logoutBox1 .item .topTit .num { width: 45px;}
+	.logoutBox1 .item .topTit h1{ font-size: 22px;line-height: 30px;}
+	.logoutBox1 .item p{font-size: 14px;line-height: 24px;margin-bottom: 10px;}
+	
+	.logoutBox2 .item .icon {width: 40px;height: 40px;}
+	.logoutBox2 .item .xian {margin: 30px 0;}
+	.logoutBox2 .item h1 {font-size: 17px;margin: 0 auto 10px auto;}
+	.logoutBox2 .item p {font-size: 14px;line-height: 24px;}
+	.logoutBox3 .item {width: 16.6%; padding: 0 5px;margin-top: 20px;}
+	.logoutBox3 .item h1 {font-size: 16px;margin-top: 20px;}
+	
+	.logoutBox4 ul{padding: 0;}
+	.logoutBox4 li {line-height: 26px;font-size: 15px;padding-right: 20px;}
+	
+	.logoutBox5 li{padding: 25px 10px;}
+	.logoutBox5 li .num {font-size: 26px;}
+	.logoutBox5 li h1 {margin: 20px 0 10px 0;font-size: 17px;}
+	.logoutBox5 li p {font-size: 14px;line-height: 24px;}
+	
+	.logoutBox6 .item{padding: 10px 0;}
+	.logoutBox6 .item .icon{width: 70px;height: 70px;}
+	.logoutBox6 .item p{margin-top: 15px;font-size: 14px;}
+	.logoutBox6 .item::after{left: 44%;}
+}
+
+@media only screen and (max-width: 500px){
+		.logoutBox1 .item .topTit {padding-left: 50px; margin-bottom: 10px;}
+		.logoutBox1 .item .topTit .num { width: 40px;}
+		.logoutBox1 .item .topTit h1{ font-size: 18px;}
+		.logoutBox1 .item .topTit h2 {font-size: 16px;}
+		.logoutBox1 .item p{font-size: 13px;line-height: 24px;}
+		.logoutBox1 .item .TipsTex {font-size: 14px;line-height: 24px;}
+		
+		.logoutBox2 .item {width: 33.3%;height: 200px;margin-top: 20px;}
+		.logoutBox2 .item h1{width: 100%;font-size: 16px;}
+		.logoutBox2 .item .xian {margin: 25px 0;}
+		.logoutBox2 .item p {font-size: 13px;line-height: 22px;width: 95%;}
+		
+		.logoutBox3 .item{width: 33.33%;margin-top: 0;padding: 15px 5px;}
+		.logoutBox3 .item h1 { font-size: 14px;margin-top: 10px;}
+		.logoutBox3 .item .icon {width: 55px;height: 55px;}
+		
+		.logoutBox4 li{width: 100%;margin-left: 0!important; font-size: 13px; line-height: 24px;padding-left: 50px; margin-top: 20px;}
+		.logoutBox4 li em{left: 10px;}
+		
+		.logoutBox5 li{width: 48%;height: 190px; margin: 15px 2% 0 0;}
+		.logoutBox5 li:nth-child(2n){margin-right: 0;float: right;}
+		.logoutBox5 li p{font-size: 13px;line-height: 22px;}
+		.logoutBox5 li h1{margin-top: 15px;font-size: 16px;}
+		
+		.logoutBox6 .cont {padding-top: 0px;}
+		.logoutBox6 .item{width: 33.33%;margin-top: 0!important; margin-bottom: 5px!important;}
+		.logoutBox6 .item::after{display: none;}
+		.logoutBox6 .item .icon span {font-size: 16px;line-height: 40px;}
+		.logoutBox6 .item p{margin-top: 10px;font-size: 13px;}
+}

@@ -62,7 +62,7 @@
 				var postData = {};
 				postData.searchItem = {
 					thirdapp_id:2,
-					title:'联系我们'
+					title:''
 				};
 				postData.getAfter = {
 					child: {
@@ -79,18 +79,6 @@
 				var callback = (res) => {
 					console.log('getMainData', res);
 					self.mainData = res.info.data[0];
-					for (var i = self.mainData['child'].length - 1; i >= 0; i--) {
-						
-						if(self.mainData['child'][i].title=="地址"){
-							self.address = self.mainData['child'][i].description
-						};
-						if(self.mainData['child'][i].title=="电话"){
-							self.phone = self.mainData['child'][i].description
-						};
-						if(self.mainData['child'][i].title=="二维码"){
-							self.qrImg = self.mainData['child'][i].mainImg
-						};
-					}
 
 				};
 				// window.base.labelGet(postData, callback);
@@ -113,15 +101,30 @@
 	footer .rightTime h1{font-size: 28px;line-height: 50px;}
 	footer .rightTime .kefuBtn{height: 40px;line-height: 40px;padding: 0 25px;background-color: #dc3a34;color: #fff; display: block;box-sizing: border-box;float: left;margin-top: 20px;}
 	footer .rightTime .kefuBtn img{width: 20px;height: 20px;display: inline-block;vertical-align: middle;margin-right: 5px;}
-	@media screen and (max-width:900px){
-		footer{padding: 20px 0 10px 0;}
+	
+	@media screen and (max-width:1050px){
+		footer{padding: 30px 0 0 0;}
+		footer .w1200{padding: 0;}
 		footer .leftNav{width: 100%; text-align: center;}
-		footer .leftNav ul li h1{font-size: 14px;padding-bottom: 0;}
-		footer .leftNav li .link a{font-size: 12px; line-height: 24px;}
-		footer .rightTime{width: 100%;margin-top: 20px;border-top: 1px solid #666;padding-top: 10px;text-align: center;}
+		footer .leftNav li{min-height: 210px;}
+		footer .leftNav li:last-child{border-right: 0;}
+		footer .leftNav li h1{font-size: 15px; padding-bottom: 10px}
+		footer .leftNav li .link a{font-size: 14px; line-height: 24px;line-height: 30px;}
+		footer .rightTime{width: 100%;margin-top: 30px;text-align: center;background-color: #222;text-align: left;padding: 20px 4%;position: relative;}
 		footer .rightTime .tit{font-size: 16px;padding-bottom: 0;}
-		footer .rightTime h1{font-size: 20px; line-height:34px;}
+		footer .rightTime h1{font-size: 20px; line-height:40px;}
 		footer .rightTime p{padding-top:0px;font-size: 14px;}
+		footer .rightTime .kefuBtn{position: absolute;top: 50%;transform: translateY(-50%);right: 4%;margin-top: 0;}
 	}
+	@media screen and (max-width:500px){
+		footer .leftNav ul li{padding: 0 2%;min-height: 160px;}
+		footer .leftNav ul li h1{font-size: 14px;padding-bottom: 5px;}
+		footer .leftNav li .link a{font-size: 12px;line-height: 24px;}
+		footer .rightTime{margin-top: 20px;}
+		footer .rightTime .tit{font-size: 14px;}
+		footer .rightTime h1{font-size: 18px;}
+		footer .rightTime .kefuBtn{padding: 0 15px;}
+	}
+	
 </style>
 

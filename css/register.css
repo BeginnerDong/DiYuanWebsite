@@ -19,7 +19,7 @@
 .registerStar .seachbx .item .icon{width: 25px;height: 25px;display: block;position: absolute;top: 50%;left: 20px;transform: translateY(-50%);}
 .registerStar .seachbx .item input{width: 100%;height: 30px;display: block;background: none;font-size: 15px;}
 .registerStar .seachbx .right{width: 20%;}
-.registerStar .seachbx .seachBtn{width: 100%;height: 60px;line-height: 50px;background: #C51114;color: #fff;text-align: center;font-size: 14px;display: block;}
+.registerStar .seachbx .seachBtn{width: 100%;height: 60px;line-height: 60px;background: #C51114;color: #fff;text-align: center;font-size: 14px;display: block;}
 .registerStar .seachbx .seachBtn img{width: 20px;height: 20px;display: inline-block; margin-right: 5px;vertical-align: middle;}
 .registerStar .B-infor{position: relative;padding:30px 3%;background-color: #fff;}
 .registerStar .B-infor .L,.registerStar .B-infor .M{width: 40%;position: relative;box-sizing: border-box;}
@@ -42,7 +42,7 @@
 .registerBox3 li img{width: 90px;height: 90px;display: block;margin: 20px auto;}
 .registerBox3 li p{font-size: 16px;}
 .registerBox3 li .img::before{content: '';width: 60%;height: 1px;background: #ccc;position: absolute;right: 70%;top: 50%;transform: translateY(-50%);}
-.registerBox3 li .img::after{content: ''; position: absolute;top: 50%; right: 0;transform: translateY(-50%);border-top: 10px transparent dashed;border-right: 10px transparent dashed;border-bottom: 10px transparent dashed;border-left: 10px #ccc solid;}
+.registerBox3 li .img::after{content: ''; position: absolute;top: 50%; right:-10px;transform: translateY(-50%);border-top: 10px transparent dashed;border-right: 10px transparent dashed;border-bottom: 10px transparent dashed;border-left: 10px #ccc solid;}
 .registerBox3 li:first-child .img::before{display: none;}
 .registerBox3 li:last-child .img::after{display: none;}
 
@@ -96,11 +96,82 @@
 .registerBox7 li h1{font-size: 30px;line-height: 40px;padding-bottom: 20px;}
 .registerBox7 li p{width: 80%;color: #666;font-size: 16px;line-height: 30px;}
 
+@media screen and (max-width:900px){
+	.registerBox1 li h1{font-size: 28px; line-height: 30px;}
+	.registerStar .cont{  padding: 30px 20px 20px 20px;}
+	.registerStar .seachbx .item{padding-left: 45px;}
+	.registerStar .seachbx .item .icon{left: 10px;}
+	.registerStar .seachbx .left{width: 75%;}
+	.registerStar .seachbx .right{width: 25%;}
+	.registerStar .B-infor{padding: 20px 3%;}
+	.registerStar .B-infor h1{font-size: 15px;}
+	.registerStar .B-infor .M{padding: 0 10px;}
+	.registerStar .B-infor .M .item{padding: 0 2%;margin-top: 20px;}
+	.registerStar .B-infor .M .icon{width: 30px;height: 30px;}
+	.registerStar .B-infor .M p{font-size: 13px;}
+	.registerStar .B-infor .M::before{height: 160px;}
+	.registerStar .B-infor .M::after{height: 160px;}
+	.registerStar .B-infor .R .icon{width: 45px;height: 45px;margin-top: 50px;}
+	
+	.registerBox3 li img{width: 75px;height: 75px;}
+	
+	.registerBox4 li{width: 30%;padding: 0;}
+	.registerBox4 li h1{font-size: 18px;padding-bottom: 0;}
+	.registerBox4 li p {font-size: 14px;line-height: 30px;}
+	.registerBox4 li.liImg{width: 40%;}
+	.registerBox4 li .ctImg{width: 80%;}
+	
+	.registerBox5 .left{padding: 0;}
+	.registerBox5 .picBox{margin-left: -12%;margin-top: 30px;}
+	.registerBox5 .picBox .item{width: 90px;height:90px;}
+	.registerBox5 .picBox .item img {height: 75px;width: 75px;margin: 10px auto;}
+	
+	.registerBox6 .item{margin: 0 1.5%;height: 200px;width: 22%;padding: 20px 10px;}
+	.registerBox6 .item h1{font-size: 16px; margin: 15px 0 10px 0;}
+	.registerBox6 .item p{font-size: 14px;line-height: 24px;}
+	
+}
 
-/* 常见问题 */
-.register_quest li{padding: 20px 3% 20px 90px;box-sizing: border-box;margin: 30px auto 0 auto;position:relative;}
-.register_quest li .num{font-size: 36px;line-height: 40px;color: #9f9f9f;position: absolute;top: 50%;left: 20px;transform: translateY(-50%);font-family: 'MicrosoftYaHeiLight';}
-.register_quest li h1{font-size: 18px;line-height: 30px;padding-bottom: 10px;font-weight: bold;}
-.register_quest li p{font-size: 15px;color: #666;line-height: 26px;}
-.register_quest li p::before{content: "答：";}
-
+@media screen and (max-width:500px){
+	.registerBox1{padding: 15px 0;}
+	.registerBox1 li h1{font-size: 20px;line-height: 30px;padding-bottom: 0;}
+	.registerBox1 li p{font-size: 12px;}
+	.registerBox1 li h1::after{font-size: 14px;right: -20px;top: -2px;font-size: 13px;}
+	
+	.registerStar .seachbx>div{width: 100%!important;}
+	.registerStar .seachbx .left{padding: 10px 10px 0 10px;margin-bottom: 15px;}
+	.registerStar .seachbx{margin-bottom: 15px;}
+	.registerStar .seachbx .item{width: 100%;padding: 10px 10px 10px 40px;border-bottom: 1px solid #eee;height: 44px;border-right: 0!important;height: auto;}
+	.registerStar .seachbx .item .icon{width: 20px;height: 20px;}
+	.registerStar .seachbx .seachBtn{height: 44px;line-height: 44px;}
+	.registerStar .B-infor .L, .registerStar .B-infor .M{width: 100%;}
+	.registerStar .B-infor .M{border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding: 15px 10px;margin: 15px 0;}
+	.registerStar .B-infor .M::before{display: none;}
+	.registerStar .B-infor .M::after{display: none;}
+	.registerStar .B-infor .M .item{margin-top: 0;}
+	.registerStar .B-infor .M .icon{margin: 8px auto;width: 25px;height: 25px;}
+	.registerStar .B-infor .R{width: 100%;}
+	.registerStar .B-infor .R .icon{margin: 5px auto;width: 40px;height: 40px;}
+	.registerStar .B-text{text-align: center;}
+	.registerStar .B-text>div{width: 100%;font-size: 13px;}
+	
+	.registerBox3 li img {width: 50px;height: 50px; margin: 10px auto;}
+	.registerBox3 li p{font-size: 14px;}
+	.registerBox3 li .img::before{width: 50%;right: 76%;}
+	.registerBox3 li .img::after{border-top: 8px transparent dashed;border-right: 8px transparent dashed;border-bottom: 8px transparent dashed;border-left:8px #ccc solid;right: -13px;}
+	
+	.registerBox4 li.liImg{display: none;}
+	.registerBox4 li{width: 48%;}
+	.registerBox4 li:last-child{float: right;}
+	
+	.registerBox4 li h1{font-size: 15px;font-weight: bold;line-height: 32px; margin-top: 0px;}
+	.registerBox4 li p {font-size: 12px;line-height: 26px;}
+	
+	.registerBox5 .cont>div{width: 100%;overflow: hidden;}
+	.registerBox5 .picBox {margin-left: -15%; margin-top: 10px;}
+	.registerBox5 .cont .left{padding-bottom: 40px;}
+	.registerBox5 .right p {font-size: 14px;margin-top: 15px;}
+	
+	.registerBox6 .item{width: 46%;margin: 15px 2% 0 2%;}
+	
+}

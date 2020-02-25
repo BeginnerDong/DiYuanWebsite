@@ -20,20 +20,20 @@
 						<li :class="currentUrl=='/companyRegister.html'?'on':''">
 							<a href="companyRegister.html">公司注册</a>
 						</li>
-						<li :class="currentUrl=='/#'?'on':''">
-							<a href="#">代理记账</a>
+						<li :class="currentUrl=='/agentBookkP.html'?'on':''">
+							<a href="agentBookkP.html">代理记账</a>
 						</li>
-						<li :class="currentUrl=='/#'?'on':''">
-							<a href="#">资质代办</a>
+						<li :class="currentUrl=='/zizhiAgency.html'?'on':''">
+							<a href="zizhiAgency.html">资质代办</a>
 						</li>
-						<li :class="currentUrl=='/#'?'on':''">
-							<a href="#">知识产权</a>
+						<li :class="currentUrl=='/propertyRight.html'?'on':''">
+							<a href="propertyRight.html">知识产权</a>
 						</li>
-						<li :class="currentUrl=='/#'?'on':''">
-							<a href="#">公司变更</a>
+						<li :class="currentUrl=='/CompanyChange.html'?'on':''">
+							<a href="CompanyChange.html">公司变更</a>
 						</li>
-						<li :class="currentUrl=='/#'?'on':''">
-							<a href="#">注册公司</a>
+						<li :class="currentUrl=='/logoutCompany.html'?'on':''">
+							<a href="logoutCompany.html">注销公司</a>
 						</li>
 					</ul>
 				</div>
@@ -104,8 +104,6 @@
 .indNavbar .navBtn{ width: 36px; height: 36px;position: absolute; right: 10px; top:50%; transform: translateY(-50%);z-index: 66; display: none;background: rgba(0,0,0,0.6);border-radius: 5px;color: #fff;padding: 5px 10px;box-sizing: border-box;}
 .indNavbar .navBtn span{display: block;width: 100%;box-sizing: border-box;height: 1px;background: #fff;margin-top:6px ;}
 
-
-
 .head-fixH{width: 100%;background-color: #222; position: fixed;top: 0;left: 0;right:0; z-index: 66;box-shadow: 0 0 8px rgba(0,0,0,0.1);}
 .headH{height: 60px;}
 @media screen and ( max-width: 1100px){ 
@@ -117,9 +115,9 @@
 	.indNavbar .list{width: 100%;}
 	.indNavbar .navBtn{ display: block;}
 	.leftLogo .text{font-size: 13px;padding: 0 10px;}
-	.indNavbar .rightNav{ display: none;width: 100%;position: fixed;top: 50px; left: 0; right: 0;z-index: 66; padding: 0;background: rgb(0,0,0,0.8);box-sizing: border-box;padding-bottom: 0;border-top: 1px solid #dc8787;}
+	.indNavbar .rightNav{ display: none;width: 100%;position: fixed;top: 50px; left: 0; right: 0;z-index: 66; padding: 0;background: rgb(0,0,0,0.9);box-sizing: border-box;padding-bottom: 0;border-top: 1px solid #dc8787;}
 	.indNavbar .list li{width: 100%;}
-	.indNavbar .list li a{width: 100%;font-size: 16px;padding-bottom: 0;box-sizing: border-box;line-height: 50px;text-align: center;}
+	.indNavbar .list li a{width: 100%;font-size: 16px;padding-bottom: 0;box-sizing: border-box;line-height: 44px;text-align: center;border-bottom: 1px solid #2d2d2d;}
 	.indNavbar .list li.on a{font-weight: bold;}
 }
 

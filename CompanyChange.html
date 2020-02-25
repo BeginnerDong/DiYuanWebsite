@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>公司变更</title>
+		<script src="./js/vue.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/include.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/change.css">
+		<link rel="stylesheet" type="text/css" href="css/property.css">
+	</head>
+
+<body>
+	<div id="app">
+		<!-- 网站导航 -->
+		<div class="pubHeader">
+			<include src="header.html"></include>
+		</div>
+		
+		<div class="pubHeadBanner">
+			<include src="headBanner.html"></include>
+		</div>
+		
+		<!-- 变更范围 -->
+		<div class="changeBox1 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>变更范围</em><span class="xian right"></span></div>
+					<p>全程一站式工商变更平台</p>
+				</div>
+				<div class="cont clearfix">
+					<div class="item">
+						<img class="icon" src="images/company-changes-icon.png" >
+						<p>公司变更名称</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/company-changes-icon1.png" >
+						<p>变更经营范围</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/company-changes-icon2.png" >
+						<p>变更注册资金</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/company-changes-icon3.png" >
+						<p>变更地址</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/company-changes-icon4.png" >
+						<p>变更法人代表</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/company-changes-icon5.png" >
+						<p>变更董事、监事</p>
+					</div>
+					<div class="item">
+						<img class="icon" src="images/company-changes-icon6.png" >
+						<p>变更股份、股东</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 变更流程 -->
+		<div class="changeBox2 bjgayf5 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>变更流程</em><span class="xian right"></span></div>
+					<p>交给缔元智能财税，一切就是这么简单</p>
+				</div>
+				<div class="cont clearfix">
+					<div class="item">
+						<div class="icon">
+							<img src="images/company-changes-icon9.png" >
+						</div>
+						<p>公司变更名称</p>
+					</div>
+					<div class="item">
+						<div class="icon">
+							<img src="images/company-changes-icon10.png" >
+						</div>
+						<p>变更经营范围</p>
+					</div>
+					<div class="item">
+						<div class="icon">
+							<img src="images/company-changes-icon11.png" >
+						</div>
+						<p>变更注册资金</p>
+					</div>
+					<div class="item">
+						<div class="icon">
+							<img src="images/company-changes-icon12.png" >
+						</div>
+						<p>变更地址</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 我们的服务 -->
+		<div class="propertyBox2">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>我们的服务</em><span class="xian right"></span></div>
+					<p>全程一站式知识产权注册平台</p>
+				</div>
+				<div class="clearfix center white">
+					<div class="item" v-for="(item,index) in bookLis" :key="index">
+						<img class="icon" :src="item.iconUrl" alt="">
+						<h1>{{item.title}}</h1>
+						<p>{{item.text}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 变更优势 -->
+		<div class="changeBox3 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>变更优势</em><span class="xian right"></span></div>
+					<p>你的专利，我们贴心保障</p>
+				</div>
+				<div class="clearfix center">
+					<div class="left fl">
+						<img src="images/company-changes-icon17.png" >
+					</div>
+					<div class="clearfix right fr">
+						<div class="item" v-for="(item,index) in youshiData" :key="index">
+							<img class="icon" :src="item.iconUrl" alt="">
+							<h1>{{item.title}}</h1>
+							<p>{{item.text}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 未及时变更 -->
+		<div class="bjgayf5 changeBox4 pdb100">
+			<div class="w1200">
+				<div class="pubTitle center">
+					<div class="title fs30 center"><span class="xian left"></span><em>未及时变更</em><span class="xian right"></span></div>
+					<p>营业执照信息发生变化，随即变更，避免一切风险</p>
+				</div>
+				<div class="cont clearfix center">
+					<img class="pic w" src="images/company-changes-img4.png" >
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!-- 缔元财税，专业顾问，一站式一对一服务 -->
+		<include src="questionSubmit.html"></include>
+		
+		<!-- 页脚 -->
+		<include src="footer.html"></include>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		var app = new Vue({
+		    el: '#app',
+		    data:function(){
+		        return {
+		        	is_toggle:false,
+					is_show:false,
+					wx_show:2,
+					bookLis:[
+						{
+							iconUrl:"images/company-changes-icon13.png",
+							title:"快速快",
+							text:"最快只需5天"
+						},
+						{
+							iconUrl:"images/company-changes-icon14.png",
+							title:"费用少",
+							text:"1000元起，比同行节省30%"
+						},
+						{
+							iconUrl:"images/company-changes-icon15.png",
+							title:"服务好",
+							text:'精细服务，提高办理效率'
+						}
+					],
+					youshiData:[
+						{
+							iconUrl:"images/company-changes-icon18.png",
+							title:"经验",
+							text:"10年服务经验专业顾问团队，拥有海量资源热情为您及时提供所需的政策信息"
+						},
+						{
+							iconUrl:"images/company-changes-icon19.png",
+							title:"服务",
+							text:"一对一专属顾问真诚贴心服务，“金牌”信誉高"
+						},
+						{
+							iconUrl:"images/company-changes-icon20.png",
+							title:"价格",
+							text:'价格透明关键节点考虑周全享受担保服务，公信力强'
+						},
+						{
+							iconUrl:"images/company-changes-icon21.png",
+							title:"售后",
+							text:'后续服务完善方案实施后，对客户执行结果进行定期沟通了解'
+						},
+					]
+		        }
+		    },
+		    created:function () {
+				 var self = this;
+				 window.base.bus.$emit('to_contentTwo',{paginate:self.paginate});
+				 self.getMainData();	
+		    },
+		    methods: {
+				getMainData: function(id){
+				    var self = this;
+				    var postData = {};
+					//postData.paginate = window.base.cloneForm(self.paginate);
+				    postData.searchItem = {
+						thirdapp_id:2
+					};	
+				    var callback = function(res){
+				        console.log('getMainData', res);
+				        self.qaData.push.apply(self.qaData,res.info.data)   
+				    };
+					console.log('self.qaData',self.qaData)
+				    window.base.labelGet(postData, callback);
+				}
+				
+		    }
+		});
+	</script>
+</html>
