@@ -8,7 +8,8 @@
 .registerBox1 li h1:nth-child(2)::after{content: "家";}
 .registerBox1 li h1:last-child::after{content: "名";}
 .registerBox1 li p{font-size: 14px;}
-
+.registerBox1 li:hover{color: #C51114;}
+.registerBox1 li:hover h1{font-weight: 600;}
 
 /* 公司核名 */
 .registerStar{background: url(../images/registered-icon5.png) no-repeat left bottom/100% auto;padding-bottom: 60px;}
@@ -28,8 +29,11 @@
 .registerStar .B-infor .M::before{content:'';width: 1px;height: 120px;background: #ddd;position: absolute;left: 0;top: 20px;}
 .registerStar .B-infor .M::after{content:'';width: 1px;height: 120px;background: #ddd;position: absolute;right: 0;top: 20px;}
 .registerStar .B-infor h1{font-size: 18px;margin-bottom: 10px;}
-.registerStar .B-infor .L P{font-size: 13px; line-height: 30px;position: relative;padding-left: 15px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
-.registerStar .B-infor .L P::before{content: '';width: 6px;height: 6px;border-radius: 50%;background-color: #999;position: absolute;top: 50%;left: 0;transform: translateY(-50%);}
+.marquee_box{display: block;height: 120px;overflow: hidden;}
+.marquee_top { transition: all 0.5s;margin-top: -30px}
+.marquee_list P{font-size: 13px; line-height: 30px;position: relative;padding-left: 15px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.marquee_list p::before{content: '';width: 6px;height: 6px;border-radius: 50%;background-color: #999;position: absolute;top: 50%;left: 0;transform: translateY(-50%);}
+.marquee_list P:hover{color: #C51114;}
 .registerStar .B-infor .M .item{width: 33.3%;float: left;padding: 0 3%;box-sizing: border-box;}
 .registerStar .B-infor .M .icon{width: 35px;height: 35px;display: block;margin: 20px auto;}
 .registerStar .B-infor .R .icon{width: 60px;height: 60px;display: block; margin: 30px auto 15px auto;}
@@ -39,12 +43,16 @@
 /* 快捷流程 */
 .registerBox3 li{width: 25%;text-align: center;float: left;}
 .registerBox3 li .img{position: relative;}
-.registerBox3 li img{width: 90px;height: 90px;display: block;margin: 20px auto;}
+.registerBox3 li .img .icon{width: 90px;height: 90px;display: block;margin: 20px auto;}
+.registerBox3 li img{width: 100%;height: 100%;display: block;transition: all 0.6s;}
 .registerBox3 li p{font-size: 16px;}
 .registerBox3 li .img::before{content: '';width: 60%;height: 1px;background: #ccc;position: absolute;right: 70%;top: 50%;transform: translateY(-50%);}
 .registerBox3 li .img::after{content: ''; position: absolute;top: 50%; right:-10px;transform: translateY(-50%);border-top: 10px transparent dashed;border-right: 10px transparent dashed;border-bottom: 10px transparent dashed;border-left: 10px #ccc solid;}
 .registerBox3 li:first-child .img::before{display: none;}
 .registerBox3 li:last-child .img::after{display: none;}
+.registerBox3 li:hover{color: #C51114;}
+.registerBox3 li:hover .img img{transform: scale(1.2);}
+
 
 /* 所需材料 */
 .registerBox4 li{padding: 0 3%;box-sizing: border-box;width: 28%;float: left;box-sizing: border-box;}
@@ -52,11 +60,13 @@
 .registerBox4 li.liImg1{ display: none;}
 .registerBox4 li h1{font-size: 24px;line-height: 40px;padding-bottom: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-top: 20px;}
 .registerBox4 li p{font-size: 16px;line-height: 40px;}
-.registerBox4 li .ctImg{width: 70%;height: auto;display: block;margin: 0 auto;}
+.registerBox4 li .ctImg{width: 70%;height: auto;display: block;margin:20px auto;transition: all 0.6s;}
+.registerBox4 li:hover{color: #C51114;}
+.registerBox4 li:hover .ctImg{transform: scale(1.2);}
 
 /* 拿到材料 */
 .registerBox5{background: url(../images/home-img2.jpg) repeat;box-sizing: border-box;}
-.registerBox5 .left{width: 50%;padding: 0 3%;box-sizing: border-box;}
+.registerBox5 .cont .left{width: 50%;padding: 0 3%;box-sizing: border-box;}
 .registerBox5 .picBox{transform:rotate(45deg);
 -ms-transform:rotate(-45deg); 	/* IE 9 */
 -moz-transform:rotate(-45deg); 	/* Firefox */
@@ -70,10 +80,10 @@
 -o-transform:rotate(45deg);}
 .registerBox5 .picBox .item:nth-child(3){clear: left;margin-left: 111px;}
 .registerBox5 .picBox .item:nth-child(2n){border-left: 0;}
-.registerBox5 .right{width: 50%;padding: 0 3%;box-sizing: border-box;}
-.registerBox5 .right p{font-size: 16px;margin-top: 25px;}
+.registerBox5 .cont .right{width: 50%;padding: 0 3%;box-sizing: border-box;margin-top: 40px;}
+.registerBox5 .cont .right p{font-size: 17px;margin-top: 30px;}
 
-.registerBox6 .item{float: left;width: 20%;height: 244px;margin:0 2.5%;padding: 30px 3%;border-radius: 5px;background-color: #fff;box-shadow: 0 0 8px rgba(0,0,0,0.15);box-sizing: border-box;}
+.registerBox6 .item{float: left;width: 20%;height: 244px;margin:0 2.5%;padding: 30px 3%;border-radius: 5px;background-color: #fff;box-shadow:0 0 8px rgba(255, 87, 87, 0.3);box-sizing: border-box;}
 .registerBox6 .item .icon{width: 35px;height: 35px;margin: 0 auto;background: url(../images/registered-icon15.1.png) no-repeat 0 0/100% 100%;}
 .registerBox6 .item:nth-child(1) .icon{background-image: url(../images/registered-icon15.1.png);}
 .registerBox6 .item:nth-child(2) .icon{background-image: url(../images/registered-icon16.png);}
@@ -113,7 +123,7 @@
 	.registerStar .B-infor .M::after{height: 160px;}
 	.registerStar .B-infor .R .icon{width: 45px;height: 45px;margin-top: 50px;}
 	
-	.registerBox3 li img{width: 75px;height: 75px;}
+	.registerBox3 li .img .icon{width: 75px;height: 75px;}
 	
 	.registerBox4 li{width: 30%;padding: 0;}
 	.registerBox4 li h1{font-size: 18px;padding-bottom: 0;}
@@ -121,10 +131,12 @@
 	.registerBox4 li.liImg{width: 40%;}
 	.registerBox4 li .ctImg{width: 80%;}
 	
-	.registerBox5 .left{padding: 0;}
+	.registerBox5 .cont .left{padding: 0;}
 	.registerBox5 .picBox{margin-left: -12%;margin-top: 30px;}
 	.registerBox5 .picBox .item{width: 90px;height:90px;}
 	.registerBox5 .picBox .item img {height: 75px;width: 75px;margin: 10px auto;}
+	.registerBox5 .cont .right{margin-top: 0;}
+	.registerBox5 .cont .right p{font-size: 15px;}
 	
 	.registerBox6 .item{margin: 0 1.5%;height: 200px;width: 22%;padding: 20px 10px;}
 	.registerBox6 .item h1{font-size: 16px; margin: 15px 0 10px 0;}
@@ -155,7 +167,7 @@
 	.registerStar .B-text{text-align: center;}
 	.registerStar .B-text>div{width: 100%;font-size: 13px;}
 	
-	.registerBox3 li img {width: 50px;height: 50px; margin: 10px auto;}
+	.registerBox3 li .img .icon{width: 50px;height: 50px; margin: 10px auto;}
 	.registerBox3 li p{font-size: 14px;}
 	.registerBox3 li .img::before{width: 50%;right: 76%;}
 	.registerBox3 li .img::after{border-top: 8px transparent dashed;border-right: 8px transparent dashed;border-bottom: 8px transparent dashed;border-left:8px #ccc solid;right: -13px;}
@@ -164,13 +176,13 @@
 	.registerBox4 li{width: 48%;}
 	.registerBox4 li:last-child{float: right;}
 	
-	.registerBox4 li h1{font-size: 15px;font-weight: bold;line-height: 32px; margin-top: 0px;}
-	.registerBox4 li p {font-size: 12px;line-height: 26px;}
+	.registerBox4 li h1{font-size: 16px;font-weight: bold;line-height: 30px; margin-top: 0px;padding-bottom: 5px;}
+	.registerBox4 li p {font-size: 14px;line-height: 30px;}
 	
-	.registerBox5 .cont>div{width: 100%;overflow: hidden;}
+	.registerBox5 .cont>div{width: 100%!important;overflow: hidden;}
 	.registerBox5 .picBox {margin-left: -15%; margin-top: 10px;}
 	.registerBox5 .cont .left{padding-bottom: 40px;}
-	.registerBox5 .right p {font-size: 14px;margin-top: 15px;}
+	.registerBox5 .cont .right p {font-size: 14px;margin-top: 15px;}
 	
 	.registerBox6 .item{width: 46%;margin: 15px 2% 0 2%;}
 	

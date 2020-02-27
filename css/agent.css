@@ -1,13 +1,16 @@
 @charset "UTF-8";
 
 /* 选择缔元 */
-.agentbkBox1 .item{width: 33.3%;text-align: center;padding: 0 6.5%;box-sizing: border-box;float: left;}
+.agentbkBox1 .item{width: 27.3%;margin: 0 2%;text-align: center;padding: 30px 3%;box-sizing: border-box;float: left;height: 280px;}
 .agentbkBox1 .item .icon{width: 60px;height: 60px;display: block;margin: 0 auto 30px auto;background: url(../images/agent-icon5.png) no-repeat 0 0/100% 100%;border: 1px solid #fff;}
 .agentbkBox1 .item .name{font-size: 22px;margin-bottom: 20px;}
 .agentbkBox1 .item .text{font-size: 15px;color: #666;line-height: 26px;}
 .agentbkBox1 .item .icon.icon1{background-image: url(../images/agent-icon.png);}
 .agentbkBox1 .item .icon.icon2{background-image: url(../images/agent-icon4.png);}
 .agentbkBox1 .item .icon.icon3{background-image: url(../images/agent-icon5.png);}
+.agentbkBox1 .item:hover{box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); color: #C51114;}
+.agentbkBox1 .item:hover .text{color: #C51114;}
+
 
 /* 代理优势 */
 .agentbkBox2 .cont .left{width: 45%;background-color: #fff;margin-top: 40px;}
@@ -17,6 +20,7 @@
 .agentbkBox2 .left p::before{content: '';width: 16px;height: 16px;background: url(../images/dailijizhang-icon5.png) no-repeat 0 0/100% 100%;position: absolute;top: 50%;left: 25px;transform: translateY(-50%);}
 .agentbkBox2 .left p span{position: relative;padding-left: 12px;width: 100%;box-sizing: border-box;display: block;}
 .agentbkBox2 .left p span::before{content: '';width: 5px;height: 5px;border-radius: 50%;background-color: #ddd;position: absolute;top: 9px;left: 0;}
+.agentbkBox2 .left:hover{box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.4);}
 
 .agentbkBox2 .right .title{line-height: 50px;text-align: center;font-size: 20px;color: #fff;background-color: #c51114;}
 .agentbkBox2 .right .item{padding: 15px 3% 15px 90px;position:relative;border-bottom: 1px solid #ddd;}
@@ -27,14 +31,18 @@
 .agentbkBox2 .right .cont p{margin-top: 10px;position: relative;padding-left: 12px;}
 .agentbkBox2 .right .cont p::before{content: '';content: '';width: 5px;height: 5px;border-radius: 50%;background-color: #222;position: absolute;top: 9px;left: 0;}
 .agentbkBox2 .right .cont::before{content: '';position: absolute;top: 50%;left: 0px;transform: translateY(-50%);width: 25px;height: 18px;background: url(../images/dailijizhang-icon7.png) no-repeat 0 0/100% 100%;}
+.agentbkBox2 .right:hover{box-shadow: 4px 4px 8px rgba(232, 0, 0, 0.5);}
 
 /* 报税流程 */
 .agentbkBox3{background:#2a3040 url(../images/dailijizhang-img.jpg) no-repeat 0 0/100% 100%;padding-bottom: 60px;}
-.agentbkBox3 .item{width: 25%;padding: 30px 3%;position: relative;margin-top: 30px;float: left;box-sizing: border-box;}
+.agentbkBox3 .item{width: 25%;padding: 30px 3%;position: relative;margin-top: 30px;float: left;box-sizing: border-box; color: #E2E2E2;}
 .agentbkBox3 .item .number{font-size: 36px;line-height: 40px;color: #999;position: absolute;left: 65%;top: 0;}
-.agentbkBox3 .item .icon{width: 50px;height: 50px;display: block;margin: 0 auto;}
-.agentbkBox3 .item h1{font-size: 16px;padding-top: 30px;line-height: 30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding-bottom: 10px;font-weight: bold;}
+.agentbkBox3 .item .icon{width: 50px;height: 50px;display: block;margin: 0 auto;transition: all 0.5s;}
+.agentbkBox3 .item h1{font-size: 16px;padding-top: 30px;line-height: 30px;padding-bottom: 10px;font-weight: bold;}
 .agentbkBox3 .item p{font-size: 15px;line-height: 30px;}
+.agentbkBox3 .item:hover{color: #fff;text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);}
+.agentbkBox3 .item:hover .number{color: #fff;}
+.agentbkBox3 .item:hover .icon{transform: scale(1.2);}
 
 .agentbkBox4{padding-bottom: 50px;}
 .agentbkBox4 .item{width: 33.3%;padding: 30px 3%;float: left;box-sizing: border-box;}
@@ -42,11 +50,12 @@
 .agentbkBox4 .item p::before{content: '';position: absolute;top: 0;left: -25px;width: 26px;height: 20px;background: url(../images/dailijizhang-icon17.png) 0 0/100% 100%;}
 .agentbkBox4 .item .pic{width: 100%;height: auto;display: block;}
 .agentbkBox4 .item:last-child{clear: both;margin: 0 auto;float: initial;}
-
+.agentbkBox4 .item:hover{color: #C51114;}
 
 
 /******************* 以下自适应样式 *******************/
 @media only screen and (max-width: 900px){
+	.agentbkBox1 .item{padding: 30px 2%;height: 250px;}
 	.agentbkBox1 .item .icon {width: 50px;height: 50px;margin-bottom: 15px;}
 	.agentbkBox1 .item .name {font-size: 18px;margin-bottom: 10px;}
 	.agentbkBox1 .item .text {font-size: 13px;line-height: 22px;}
@@ -72,20 +81,22 @@
 }
 
 @media only screen and (max-width: 500px){
-	.agentbkBox1 .item{padding: 0 2%;}
+	.agentbkBox1 .item{padding:15px 2px;width: 48%;margin: 0;height: 210px;}
+	.agentbkBox1 .item:nth-child(2){float: right;}
+	.agentbkBox1 .item:nth-child(3){float: initial;clear: both;margin: 0 auto;}
 	.agentbkBox1 .item .icon {width: 40px;height: 40px;margin-bottom: 10px;}
 	.agentbkBox1 .item .name {font-size: 16px;margin-bottom: 5px;}
-	.agentbkBox1 .item .text {font-size: 12px;line-height: 20px;}
+	.agentbkBox1 .item .text {font-size: 13px;line-height: 22px;}
 	
 	.agentbkBox2 .cont .left{width: 100%;margin-top: 0;margin-bottom: 20px;}
 	.agentbkBox2 .cont .right{width: 100%;}
 	
 	.agentbkBox2 .left .title {line-height: 44px;font-size: 16px;}
-	.agentbkBox2 .left p{padding-left: 40px;font-size: 13px;}
+	.agentbkBox2 .left p{font-size: 14px; padding: 10px 4% 10px 40px;line-height: 22px;}
 	.agentbkBox2 .left p::before{left: 10px;}
 	.agentbkBox2 .right .title {line-height: 44px;font-size: 17px;}
 	.agentbkBox2 .right .cont h1{font-size: 15px;}
-	.agentbkBox2 .right .cont p {font-size: 13px;line-height: 22px;}
+	.agentbkBox2 .right .cont p {font-size: 14px;line-height: 22px;}
 	.agentbkBox2 .right .item {padding: 10px 3% 10px 70px;}
 	.agentbkBox2 .right .item .icon img {width: 25px;height: 25px;}
 	
@@ -94,10 +105,10 @@
 	.agentbkBox3 .item .icon{ width: 35px;height: 35px;}
 	.agentbkBox3 .item .number{font-size: 22px;line-height: 24px;}
 	.agentbkBox3 .item h1 {font-size: 15px;padding-top: 10px;line-height: 24px;padding-bottom: 8px;}
-	.agentbkBox3 .item p {font-size: 12px;line-height: 24px;}
+	.agentbkBox3 .item p {font-size: 13px;line-height: 22px;}
 	
 	.agentbkBox4 .item{width: 100%;padding-top: 20px!important;}
 	.agentbkBox4 .item:last-child {}
-	.agentbkBox4 .item p {padding-top: 0px; padding-left: 10px;font-size: 12px;line-height: 22px;}
+	.agentbkBox4 .item p {padding-top: 0px; padding-left: 10px;font-size: 13px;line-height: 24px;}
 	.agentbkBox4 .item p::before {left: -15px;}
 }

@@ -5,10 +5,12 @@
 
 /* 报税流程 */
 .propertyBox2{background:#2a3040 url(../images/dailijizhang-img.jpg) no-repeat 0 0/100% 100%;padding-bottom: 60px;}
-.propertyBox2 .item{width: 33.3%;padding: 15px 3%;float: left;box-sizing: border-box;}
-.propertyBox2 .item .icon{width: 100px;height: 100px;display: block;margin: 0 auto;}
-.propertyBox2 .item h1{font-size: 17px;padding-top: 30px;line-height: 30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding-bottom: 10px;font-weight: bold;}
+.propertyBox2 .item{width: 33.3%;padding: 15px 3%;float: left;box-sizing: border-box; color: #E2E2E2;}
+.propertyBox2 .item .icon{width: 100px;height: 100px;display: block;margin: 0 auto;transition: all 0.6s;}
+.propertyBox2 .item h1{font-size: 17px;padding-top: 30px;line-height: 30px;padding-bottom: 10px;font-weight: bold;}
 .propertyBox2 .item p{font-size: 14px;line-height: 30px;}
+.propertyBox2 .item:hover{color: #fff;}
+.propertyBox2 .item:hover .icon{transform: scale(1.1);}
 
 /* 服务优势 */
 .propertyBox3 li{width: 40%;padding: 0 0px 0 50px;box-sizing: border-box;float: left;}
@@ -20,6 +22,8 @@
 .propertyBox3 li.middle{border-right: 1px dashed #dbdbdb;    padding: 0 30px 0 20px;}
 .propertyBox3 li.middle p em::after{content: "";width: 20px;height: 20px;background: url(../images/chanquan-icon8.png) no-repeat 0 0/100% 100%;position: absolute;right: 0;top: 3px;}
 .propertyBox3 li.right p em::after{content: "";width: 20px;height: 20px;background: url(../images/chanquan-icon9.png) no-repeat 0 0/100% 100%;position: absolute;right: 0;top: 3px;}
+.propertyBox3 li p:hover em{color: #C51114;}
+
 
 .propertyBox4 .cont{padding: 0 5%;}
 .propertyBox4 .item{width: 26%;height: 310px;box-sizing: border-box;    padding: 50px 5% 50px 4%;position: relative;text-align: center;float: left;margin-right: 11%;background: url(../images/chanquan-icon18.png) no-repeat 0 0/100% 100%;}
@@ -28,7 +32,9 @@
 .propertyBox4 .item h1{font-size: 20px;font-weight: bold;}
 .propertyBox4 .item p{font-size: 15px;color: #666;line-height: 24px;margin: 30px 0;}
 .propertyBox4 .item .btn{width: 100px;height: 30px;line-height: 30px;border: 1px solid #C51114;display: block;margin: 0 auto;font-size: 14px;color: #666;position: absolute;bottom: 90px;left: 50%;transform: translateX(-50%);}
-
+.propertyBox4 .item:hover{color: #C51114;}
+.propertyBox4 .item:hover p{color: #C51114;}
+.propertyBox4 .item:hover .btn{background-color: #C51114;color: #fff;}
 
 .propertyBox5{background:#2a3040 url(../images/chanquan-img.png) no-repeat 0 0/100% 100%;padding-bottom: 80px;}
 .propertyBox5 .cont{padding: 0 3%;margin-top: 30px;}
@@ -38,6 +44,8 @@
 .propertyBox5 .item h1{font-size: 18px;padding: 50px 0 30px 0;line-height: 30px;font-weight: bold;position: relative;}
 .propertyBox5 .item h1::after{content: '';width: 50px;height: 1px;background: #e19f15;position: absolute;bottom: 0px;left: 50%;transform: translateX(-50%);}
 .propertyBox5 .item p{font-size: 14px;color: #666;margin-top:30px;}
+.propertyBox5 .item:hover{background-color: #ffe4e4;box-shadow: 0 0 8px rgba(0,0,0,0.5);outline: 2px solid #C51114;color: #C51114;}
+.propertyBox5 .item p:hover{14px;color: #C51114;}
 
 
 .propertyBox6 .item{width: 33.3%;height: 320px;box-sizing: border-box;padding:0 3%;float: left;border-right: 1px dashed #e2c09a;}
@@ -45,6 +53,9 @@
 .propertyBox6 .item .icon{width:160px;height: 160px;display: block;margin: 0 auto;}
 .propertyBox6 .item h1{font-size: 16px;padding:30px 0;line-height: 24px;font-weight: bold;position: relative;}
 .propertyBox6 .item p{font-size: 14px;color: #666;}
+.propertyBox6 .item:hover{color: #C51114;}
+.propertyBox6 .item:hover p{color: #C51114;}
+
 
 .propertyBox7 .bigTit{width: 100%;line-height: 60px;border-radius: 30px;font-size: 20px;}
 .propertyBox7 .item{float: left;width: 200px;height: 495px;margin: 0 4%;padding: 160px 10px 50px 10px;box-sizing: border-box;background:url(../images/chanquan-icon16.png) no-repeat 0 0/100% 100% ;}
@@ -101,17 +112,17 @@
 	.propertyBox3 li.left{width: 100%;}
 	.propertyBox3 li.left span{float: left;clear: initial;width: 23.5%;height: 36px;line-height: 36px;font-size: 13px;margin:15px 2% 15px 0;}
 	.propertyBox3 li.left span:last-child{margin-right: 0;}
-	.propertyBox3 li h1 {font-size: 16px;line-height: 30px;}
+	.propertyBox3 li h1 {font-size: 16px;line-height: 24px;height: 48px;}
 	.propertyBox3 li p {margin-top: 10px;}
 	.propertyBox3 li.middle {border-right: 1px dashed #dbdbdb;padding: 0 15px 0 0px;}
 	.propertyBox3 li p em {padding-right: 16px;font-size: 13px;}
 	.propertyBox3 li.right{padding-left: 15px;}
 	.propertyBox3 li p em::after{width: 13px!important;height: 13px!important;right: -3px!important;}
 	
-	.propertyBox4 .item{width: 49%;height: 260px;padding: 30px 6% 30px 5%;}
+	.propertyBox4 .item{width: 49%;height: 230px;padding: 30px 6% 30px 5%;}
 	.propertyBox4 .item:nth-child(2n){margin-right: 0;float: right;}
 	.propertyBox4 .item h1{font-size: 16px;}
-	.propertyBox4 .item p{ margin: 10px 0;}
+	.propertyBox4 .item p{ margin: 10px 0; line-height: 22px;}
 	.propertyBox4 .item .btn {width: 90px;}
 	.propertyBox4 .item:last-child{float: initial;margin:20px auto;clear: both;}
 	

@@ -1,5 +1,4 @@
-<div id="banner_app" >
-	<div class="">
+<div id="banner_app"  style="height: 100%;">
 		<div class="banner clearfix" v-for="(item,index) in bannerData" v-show="index==banner_index" style="height:100%">
 			<img class="pic" :src="item" />
 		</div>
@@ -8,7 +7,7 @@
 		<div class="banBtnNav">
 			<span v-for="(item,index) in bannerData" :class="index==banner_index?'active':''" :data-index="index" @click="toBannerOne"></span>
 		</div>
-	</div>
+		
 </div>
 
 

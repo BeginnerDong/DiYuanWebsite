@@ -177,7 +177,18 @@ a:link, a:visited {text-decoration: none; outline: none;}
 .h100{ height: 100px;}
 .h150{ height: 150px;}
 
-
+/* 页面右侧固定客服电话 */
+.R-fixd{position: fixed;top: 45%;right: 10px;z-index:65;}
+.R-fixd .item{background: #C51114;color: #fff;margin-bottom: 10px;overflow: hidden;padding: 10px;box-sizing: border-box;float: right;clear: both;}
+.R-fixd .item .icon{width: 20px;height: 20px;float: left;}
+.R-fixd .item .icon img{width: 100%;height: 100%;}
+.R-fixd .item p{float: left;line-height: 20px;margin-left: 8px;font-size: 14px;display: none;}
+.R-fixd .item .ewm{width: 98px;height: 98px;margin: 0 auto;padding: 8px 0;clear: both;display: none;}
+.R-fixd .item .ewm img{width: 100%;height: 100%;}
+/* .R-fixd .item:hover{width: 140px;}
+.R-fixd .item:hover p,.R-fixd .item:hover .ewm{display: block;} */
+.R-fixd .item.on{width: 140px;}
+.R-fixd .item.on p,.R-fixd .item.on .ewm{display: block;}
 
 /*公共标题*/
 .pubTitle{padding-top: 80px;padding-bottom: 40px; color: #e19f15;}
@@ -195,19 +206,18 @@ a:link, a:visited {text-decoration: none; outline: none;}
 	.w1200{width: 100%;padding: 0 3%;}
 	.pubTitle{padding: 40px 2% 25px 2%;}
 	.pubTitle .title{font-size: 20px;line-height: 26px;}
-	.pubTitle p{font-size: 14px;padding-top:5px;}
+	.pubTitle p{font-size: 15px;padding-top:5px;}
 	.pubTitle .title .xian{width: 36%;}
 	.pubTitle .title .xian::after{width: 40px;height: 26px;}
 	.pdb100{padding-bottom: 50px;}
 }
 @media screen and (max-width:500px){
-	.pdb100{padding-bottom: 30px;}
 	.pubTitle{padding: 30px 2% 15px 2%;}
-	.pubTitle p{font-size: 13px;}
+	.pubTitle p{font-size: 14px;}
 	.pubTitle .title{font-size: 18px;}
 	.pubTitle .title .xian{width: 24%;}
 	.pubTitle .title .xian::after{width: 32px;height: 22px;}
-	.pdb100{padding-bottom: 30px;}
+	.pdb100{padding-bottom: 40px;}
 }
 
 /* banner 各种屏幕自适应 */

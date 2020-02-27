@@ -1,0 +1,98 @@
+<div id="Rfixd">
+	<div class="R-fixd">
+		<div class="item" :class="curr==1?'on':''" @click="currChange(1)">
+			<div class="icon"><img src="images/R-icon.png"/></div>
+			<p>18689562356</p>
+		</div>
+		<div class="item" :class="curr==2?'on':''" @click="currChange(2)">
+			<div class="icon"><img src="images/R-icon1.png"/></div>
+			<p>81956862</p>
+		</div>
+		<div class="item" :class="curr==3?'on':''" @click="currChange(3)">
+			<div class="icon"><img src="images/R-icon2.png"/></div>
+			<p>15689234562</p>
+			<div class="ewm">
+				<img src="images/R-img.png" >
+			</div>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	var Rfixd = new Vue({
+	    el: '#Rfixd',
+	    data:function(){
+	        return {
+	        	is_toggle:false,
+				is_show:false,
+				curr:0
+	        }
+	    },
+	    created:function () {
+	        var self = this;
+			self.getMainData()
+	    },
+	    methods: {
+			currChange(curr){
+				 var self = this;
+				 if(curr!=self.curr){
+					self.curr = curr
+				 }else{
+					 self.curr = 0
+				 }
+			},
+			getMainData: function(id) {
+				var self = this;
+
+				var callback = (res) => {
+					console.log('getMainData', res);
+					self.mainData = res.info.data[0];
+
+				};
+				// window.base.labelGet(postData, callback);
+			},
+	        
+	    	
+	    }
+	});   
+</script>
+<style type="text/css">
+	/* 页脚*/
+	footer{background: #2e3238;padding: 50px 0;color: #abadaf;}
+	footer .leftNav{width: 70%;float: left;}
+	footer .leftNav ul li{width: 25%;float: left;box-sizing: border-box;border-right: 1px solid #666;padding: 0 3%;text-align: center;padding-bottom: 15px;min-height: 240px;}
+	footer .leftNav ul li h1{font-size:16px;line-height: 30px;padding-bottom: 15px;color: #fff;}
+	footer .leftNav li .link a{font-size: 14px;color: #c1c1c1;line-height: 36px;display: block;width: 100%;}
+	footer .leftNav li .link a:hover{color: #fff;}
+	footer .rightTime{width: 30%;float: right;box-sizing: border-box;padding-left: 5%;}
+	footer .rightTime .tit{font-size: 16px;padding-bottom: 30px;line-height: 30px;}
+	footer .rightTime h1{font-size: 28px;line-height: 50px;}
+	footer .rightTime .kefuBtn{height: 40px;line-height: 40px;padding: 0 25px;background-color: #dc3a34;color: #fff; display: block;box-sizing: border-box;float: left;margin-top: 20px;}
+	footer .rightTime .kefuBtn img{width: 20px;height: 20px;display: inline-block;vertical-align: middle;margin-right: 5px;}
+	
+	@media screen and (max-width:1050px){
+		footer{padding: 30px 0 0 0;}
+		footer .w1200{padding: 0;}
+		footer .leftNav{width: 100%; text-align: center;}
+		footer .leftNav li{min-height: 210px;}
+		footer .leftNav li:last-child{border-right: 0;}
+		footer .leftNav li h1{font-size: 15px; padding-bottom: 10px}
+		footer .leftNav li .link a{font-size: 14px; line-height: 24px;line-height: 30px;}
+		footer .rightTime{width: 100%;margin-top: 30px;text-align: center;background-color: #222;text-align: left;padding: 20px 4%;position: relative;}
+		footer .rightTime .tit{font-size: 16px;padding-bottom: 0;}
+		footer .rightTime h1{font-size: 20px; line-height:40px;}
+		footer .rightTime p{padding-top:0px;font-size: 14px;}
+		footer .rightTime .kefuBtn{position: absolute;top: 50%;transform: translateY(-50%);right: 4%;margin-top: 0;}
+	}
+	@media screen and (max-width:500px){
+		footer .leftNav ul li{padding: 0 2%;min-height: 160px;}
+		footer .leftNav ul li h1{font-size: 14px;padding-bottom: 5px;}
+		footer .leftNav li .link a{font-size: 12px;line-height: 24px;}
+		footer .rightTime{margin-top: 20px;}
+		footer .rightTime .tit{font-size: 14px;}
+		footer .rightTime h1{font-size: 18px;}
+		footer .rightTime .kefuBtn{padding: 0 15px;}
+	}
+	
+</style>
+

@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="js/base.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/public.css">
 		<link rel="stylesheet" type="text/css" href="css/agent.css">
+		<link rel="stylesheet" href="css/animate/animate.min.css">
 	</head>
 
 <body>
@@ -26,6 +27,9 @@
 		<div class="pubHeadBanner">
 			<include src="headBanner.html"></include>
 		</div>
+		
+		<!-- 右侧固定图标 -->
+		<include src="Rfixd.html"></include>
 		
 		<!-- 选择缔元 -->
 		<div class="agentbkBox1 pdb100">
@@ -55,20 +59,20 @@
 		</div>
 		
 		<!-- 代理优势 -->
-		<div class="agentbkBox2 bjgayf5 pdb100">
+		<div class="agentbkBox2 bjgayf5 pdb100 oh">
 			<div class="w1200">
 				<div class="pubTitle center">
 					<div class="title fs30 center"><span class="xian left"></span><em>代理优势</em><span class="xian right"></span></div>
 					<p>实力说明一切</p>
 				</div>
 				<div class="cont clearfix">
-					<div class="left fl">
+					<div class="left fl animated bounceInLeft">
 						<div class="title">其他公司</div>
 						<div class="infor color6">
 							<p  v-for="(item,index) in otherAdvtgData" :key="index"><span>{{item}}</span></p>
 						</div>
 					</div>
-					<div class="right fr">
+					<div class="right fr  animated bounceInRight">
 						<div class="title">缔元财税</div>
 						<div class="infor">
 							<div class="item" v-for="(item,index) in ourAdvtgData" :key="index">
@@ -87,14 +91,14 @@
 		</div>
 		
 		<!-- 报税流程 -->
-		<div class="agentbkBox3">
+		<div class="agentbkBox3 oh">
 			<div class="w1200">
 				<div class="pubTitle center">
 					<div class="title fs30 center"><span class="xian left"></span><em>记账报税流程</em><span class="xian right"></span></div>
 					<p>在缔元记账报税，每月资深会计做账票据，您身边的财税专家</p>
 				</div>
 				<div class="clearfix center white">
-					<div class="item" v-for="(item,index) in bookLis" :key="index">
+					<div class="item animated fadeInUp" v-for="(item,index) in bookLis" :key="index">
 						<h2 class="number">{{item.number}}</h2>
 						<img class="icon" :src="item.iconUrl" alt="">
 						<h1>{{item.title}}</h1>
@@ -106,7 +110,7 @@
 		
 		<div class="w1200 pdb100 agentbkBox4">
 			<div class="pubTitle center">
-				<div class="title fs30 center"><span class="xian left"></span><em>不包税后果</em><span class="xian right"></span></div>
+				<div class="title fs30 center"><span class="xian left"></span><em>不报税后果</em><span class="xian right"></span></div>
 				<p>开启首次记账报税</p>
 			</div>
 			<div class="clearfix">
@@ -155,7 +159,7 @@
 						{
 							iconUrl:"images/dailijizhang-icon6.png",
 							title:"超值实惠",
-							text:"官网明码标价，收费透明，无隐形收费，无限制区域行业税统一价格200元/月"
+							text:"官网明码标价，收费透明，无隐形收费，无限制区域行业税统一价格188元/月起"
 						},
 						{
 							iconUrl:"images/dailijizhang-icon8.png",
@@ -189,15 +193,15 @@
 						},
 						{
 							number:"03",
-							iconUrl:"images/dailijizhang-icon15.png",
-							title:"会计师审查",
-							text:"10年以上注册会计师审核把关让您的账目100%健康"
-						},
-						{
-							number:"04",
 							iconUrl:"images/dailijizhang-icon16.png",
 							title:"纳税申报",
 							text:"我们会在每月15日前按时报税如需缴税会在第一时间与您确认"
+						},
+						{
+							number:"04",
+							iconUrl:"images/dailijizhang-icon15.png",
+							title:"申报表及会计凭证订制",
+							text:"将申报表，会计凭证按年汇总订制"
 						}
 					]
 					

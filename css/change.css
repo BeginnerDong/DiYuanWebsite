@@ -7,6 +7,7 @@
 .changeBox1 .item::after{content: '';width: 73%;height: 61px;background: url(../images/company-changes-icon7.png) no-repeat 0 0/100% 100%;position: absolute;top:63px;left: -23px;}
 .changeBox1 .item:nth-child(2n)::after{background-image: url(../images/company-changes-icon8.png);top:auto;bottom: 63px;left: -20px;}
 .changeBox1 .item:last-child::after{display: none;}
+.changeBox1 .item:hover{color: #C51114;}
 
 
 .changeBox2 .item{width: 25%;box-sizing: border-box;text-align: center;float: left;position: relative;overflow: hidden;}
@@ -15,17 +16,21 @@
 .changeBox2 .item .icon::after{content: '';width: 50%;height: 1px;border-bottom: 1px dashed #a2a2a2;position: absolute;top:50%;left: 60%;transform: translateY(-50%);}
 .changeBox2 .item:first-child .icon::before{display: none;}
 .changeBox2 .item:last-child .icon::after{display: none;}
-.changeBox2 .item .icon img{width: 100px;height: 100px;display: block;margin: 30px auto;position: relative;z-index: 1;}
+.changeBox2 .item .icon img{width: 100px;height: 100px;display: block;margin: 30px auto;position: relative;z-index: 1;transition: all 0.6s;}
 .changeBox2 .item p{font-size: 18px;}
-
+.changeBox2 .item:hover{color: #C51114;}
+.changeBox2 .item:hover .icon img{transform: scale(1.1);}
 
 .changeBox3 .left{width: 30%;}
 .changeBox3 .left img{width: 100%;height: 100%; display: block;}
 .changeBox3 .right{width: 65%;}
-.changeBox3 .right .item{float: left;width: 25%;height: 210px;padding: 0 3%;box-sizing: border-box;margin-top: 70px;}
-.changeBox3 .item .icon{width: 40px;height: 40px;display: block;margin: 0 auto;}
+.changeBox3 .right .item{float: left;width: 25%;height: 250px;padding:20px 3%;box-sizing: border-box;margin-top: 50px;}
+.changeBox3 .item .icon{width: 40px;height: 40px;display: block;margin: 0 auto;transition: all 0.3s;}
 .changeBox3 .item h1{font-size: 18px;padding:25px 0 15px 0;line-height: 30px;}
 .changeBox3 .item p{font-size: 14px;line-height: 24px;}
+.changeBox3 .item:hover{color: #C51114;box-shadow: 0 0 8px rgba(255,0,0,0.3);}
+.changeBox3 .item:hover h1{font-weight: bold;}
+.changeBox3 .item:hover .icon{transform: scale(1.1);}
 
 .changeBox4 .cont{margin-top: 30px;}
 .changeBox4 .cont .pic{width: 90%;margin: 0 auto;}
@@ -45,7 +50,7 @@
 	.changeBox3 .left{width: 100%;}
 	.changeBox3 .left img{width: 200px;height: auto;margin: 0 auto;}
 	.changeBox3 .right{width: 100%;}
-	.changeBox3 .right .item {height: 200px;padding: 0 2%;margin-top: 30px;}
+	.changeBox3 .right .item {height: 235px;padding: 20px 2%;margin-top: 30px;}
 	.changeBox3 .item h1 {padding: 15px 0 10px 0;}
 	.changeBox3 .item p {font-size: 13px;}
 }
@@ -62,10 +67,10 @@
 	.changeBox2 .item p {font-size: 13px;}
 	
 	.changeBox3 .left img{width: 180px;}
-	.changeBox3 .right .item {width: 50%;height: 150px; margin-top: 20px;}
+	.changeBox3 .right .item {width: 50%;height: 190px; margin-top: 20px;}
 	.changeBox3 .item .icon{width: 35px;height: 35px;}
 	.changeBox3 .item h1 {font-size: 17px;line-height: 24px;}
-	.changeBox3 .item p{font-size: 12px;line-height: 20px;}
+	.changeBox3 .item p{font-size: 13px;line-height: 22px;}
 	
 	.changeBox4 .cont {margin-top: 10px;}
 }

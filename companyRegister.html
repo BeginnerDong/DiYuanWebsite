@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="js/base.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/public.css">
 		<link rel="stylesheet" type="text/css" href="css/register.css">
+		<link rel="stylesheet" href="css/animate/animate.min.css">
 	</head>
 
 <body>
@@ -26,6 +27,9 @@
 		<div class="pubHeadBanner">
 			<include src="headBanner.html"></include>
 		</div>
+		
+		<!-- 右侧固定图标 -->
+		<include src="Rfixd.html"></include>
 	
 		<div class="registerBox1 center">
 			<div class="w1200">
@@ -72,11 +76,10 @@
 					<div class="B-infor clearfix">
 						<div class="L fl">
 							<h1>目前已有<em class="red">569870</em>次查询，最新查询结果如下：</h1>
-							<div class="color9">
-								<p class="">西安***实业集团有限公司：130***3452不能注册</p>
-								<p class="">西安***实业集团有限公司：130***3452不能注册</p>
-								<p class="">西安***实业集团有限公司：130***3452不能注册</p>
-								<p class="">西安***实业集团有限公司：130***3452不能注册</p>
+							<div class="color9 marquee_box">
+								<div class="marquee_list" :class="{marquee_top:animate}">
+									<p v-for="(item,index) in marqueeList" >西安***实业集团有限公司：130***3452不能注册</p>
+								</div>
 							</div>
 						</div>
 						<div class="M fl">
@@ -116,29 +119,37 @@
 					<div class="title fs30 center"><span class="xian left"></span><em>快捷流程</em><span class="xian right"></span></div>
 					<p>3-5个工作日，急速注册</p>
 				</div>
-				<div class="registerBox3">
-					<ul class="clearfix center">
-						<li>
+				<div class="registerBox3 oh">
+					<ul class="clearfix center animated bounceInUp">
+						<li class="" >
 							<div class="img">
-								<img src="images/registered-icon10.png" >
+								<div class="icon">
+									<img src="images/registered-icon8.png" >
+								</div>
 							</div>
 							<p>核名</p>
 						</li>
 						<li>
 							<div class="img">
-								<img src="images/registered-icon9.png" >
+								<div class="icon">
+									<img src="images/registered-icon9.png" >
+								</div>
 							</div>
 							<p>设立</p>
 						</li>
 						<li>
 							<div class="img">
-								<img src="images/registered-icon10.png" >
+								<div class="icon">
+									<img src="images/registered-icon10.png" >
+								</div>
 							</div>
 							<p>领取执照</p>
 						</li>
 						<li>
 							<div class="img">
-								<img src="images/registered-icon11.png" >
+								<div class="icon">
+									<img src="images/registered-icon11.png" >
+								</div>
 							</div>
 							<p>注册完成</p>
 						</li>
@@ -157,18 +168,20 @@
 				</div>
 				<div class="">
 					<ul class="clearfix">
-						<li class="liImg liImg1"><img class="ctImg" src="images/registered-img.png" /></li>
-						<li>
+						<li class="animated bounceInLeft">
 							<h1>客户准备</h1>
-							<p>1、内资公司设立登记申请水</p>
-							<p>2、企业名称预先核准通知书</p>
-							<p>3、制定（委托）书</p>
-							<p>4、补充信息登记表</p>
+							<p>1、法人、股东身份信息；</p>
+							<p>2、注册资金</p>
+							<p>3、经营范围</p>
+							<p>4、入股比例</p>
+							<p>5、地址</p>
+							<p>6、名称（5个以上名字）</p>
+							<p>7、手机号码和固定电话号码</p>
 						</li>
-						<li class="liImg liImg2">
+						<li class="liImg liImg2 flipInX animated">
 							<img class="ctImg" src="images/registered-img.png" />
 						</li>
-						<li>
+						<li class="animated bounceInRight">
 							<h1>工商部门领取下载</h1>
 							<p>1、公司章程</p>
 							<p>2、股东资格证明</p>
@@ -186,10 +199,10 @@
 			<div class="w1200">
 				<div class="pubTitle center">
 					<div class="title fs30 center"><span class="xian left"></span><em>拿到材料</em><span class="xian right"></span></div>
-					<p>从2016年10月起全国统一实行无证合一</p>
+					<p>从2016年10月起全国统一实行五证合一</p>
 				</div>
 				<div class="cont clearfix">
-					<div class="left topImg fl">
+					<div class="left topImg fl animated bounceInLeft">
 						<div class="picBox">
 							<div class="item">
 								<img src="images/registered-img2.png" alt="">
@@ -205,41 +218,39 @@
 							</div>
 						</div>
 					</div>
-					<div class="right cont fr white" >
-						<p>1、营业执照（正、副本）</p>
-						<p>2、企业统一社会信息代码证明</p>
-						<p>3、公司章程</p>
-						<p>4、房屋租赁合同</p>
-						<p>5、公司印章及印鉴留存卡</p>
+					<div class="right cont fr white animated bounceInRight" >
+						<p>1、营业执照正本、副本</p>
+						<p>2、公司章程</p>
+						<p>3、公章、财务章、法人章、合同章、发票章和印鉴留存卡</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	
 		<!-- 我们的优势 -->
-		<div class="registerBox6 pdb100">
+		<div class="registerBox6 pdb100 oh">
 			<div class="w1200">
 				<div class="pubTitle center">
 					<div class="title fs30 center"><span class="xian left"></span><em>我们的优势</em><span class="xian right"></span></div>
 					<p>从2016年10月起全国统一实行无证合一</p>
 				</div>
 				<div class="clearfix center">
-					<div class="item">
+					<div class="item animated bounceInDown">
 						<div class="icon"></div>
 						<h1>省钱</h1>
 						<p>全程专业化办理，标准化操作，无隐形收费，让您省钱</p>
 					</div>
-					<div class="item">
+					<div class="item animated bounceInDown">
 						<div class="icon"></div>
 						<h1>省钱</h1>
 						<p>全程专业化办理，标准化操作，无隐形收费，让您省钱</p>
 					</div>
-					<div class="item">
+					<div class="item animated bounceInDown">
 						<div class="icon"></div>
 						<h1>省钱</h1>
 						<p>全程专业化办理，标准化操作，无隐形收费，让您省钱</p>
 					</div>
-					<div class="item">
+					<div class="item animated bounceInDown">
 						<div class="icon"></div>
 						<h1>省钱</h1>
 						<p>全程专业化办理，标准化操作，无隐形收费，让您省钱</p>
@@ -269,6 +280,8 @@
 		        	is_toggle:false,
 					is_show:false,
 					wx_show:2,
+					animate: false,
+					marqueeList:[{},{},{},{},{}],
 					indxLastbox:[
 						{
 							iconUrl:"images/home-icon14.png",
@@ -320,10 +333,20 @@
 		    created:function () {
 				 var self = this;
 				 window.base.bus.$emit('to_contentTwo',{paginate:self.paginate});
-				 self.getMainData();	
+				 self.getMainData();
+				setInterval(self.scroll,2000)
 		    },
 		    methods: {
-		        
+				scroll: function () {
+				   var self = this;
+					   self.animate = true;
+		
+					   setTimeout (() => {
+						   self.marqueeList.push (self.marqueeList[ 0 ]);
+						   self.marqueeList.shift ();
+						   self.animate = false;
+					   }, 500);
+				   },
 				getMainData: function(id){
 				    var self = this;
 				    var postData = {};

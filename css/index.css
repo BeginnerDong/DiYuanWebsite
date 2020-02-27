@@ -8,21 +8,38 @@
 .MdMorebtn a:hover{background: #10A2E4;color: #fff;}
 
 /* 首页-我要办理相关证*/
-.index_fiveCard li{width: 19%;box-sizing: border-box;padding: 50px 2% 0 2%;float: left;margin-right: 1.2%; color: #e19f15;background-color: #0d1829;}
-.index_fiveCard li:last-child{margin-right: 0;}
+.index_fiveCard .cont ul{background: url(../images/home-img0.jpg) no-repeat 0 0/100% auto;}
+.index_fiveCard .cont ul{margin-left: -15px;}
+.index_fiveCard li{width: 20%;box-sizing: border-box;float: left;color: #e19f15;position: relative;height: 570px;border-left: 15px solid #fff;box-sizing: border-box;}
+.index_fiveCard li:nth-child(6){display: none;}
+.index_fiveCard li:nth-child(6) .box{display: none;}
+.index_fiveCard li:nth-child(6):hover{background-color: rgba(0,0,0,0);}
+.index_fiveCard li .box{padding: 50px 2% 0 2%;}
 .index_fiveCard li .title{display: table;margin: 0 auto;}
 .index_fiveCard li p{height: 200px;float: left;line-height: 22px;padding: 0 15px;-webkit-writing-mode: vertical-rl;writing-mode: vertical-rl;}
 .index_fiveCard li .p1{font-size: 20px;border-right: 1px solid #e19f15;}
-.index_fiveCard li .infor{margin-top: 30px;padding-bottom: 50px;}
+.index_fiveCard li .infor{margin-top: 30px;padding-bottom: 50px;position: relative;}
 .index_fiveCard li .infor .btn{width: 100px;height: 36px;line-height: 36px;display: block;border: 1px solid #e19f15;margin: 0 auto;font-size: 15px;}
-.index_fiveCard li:nth-child(1){padding-bottom: 15px;}
-.index_fiveCard li:nth-child(2){padding-bottom: 130px;}
-.index_fiveCard li:nth-child(3){padding-bottom: 60px;background:#0d1829 url(../images/home-img.jpg) no-repeat left bottom/100% auto;}
-.index_fiveCard li:nth-child(4){padding-bottom: 110px;}
-.index_fiveCard li:nth-child(5){padding-bottom: 15px;}
+.index_fiveCard li:nth-child(1){border-bottom: 130px solid #fff;}
+.index_fiveCard li:nth-child(2){border-bottom: 0px solid #fff;}
+.index_fiveCard li:nth-child(3){border-bottom: 80px solid #fff;}
+.index_fiveCard li:nth-child(4){border-bottom: 40px solid #fff;}
+.index_fiveCard li:nth-child(5){border-bottom: 120px solid #fff;}
 .index_fiveCard li:hover{background:#C51114;color: #fff;}
 .index_fiveCard li:hover .infor .btn{ color: #fff;border:1px solid #fff;}
 .index_fiveCard li:hover .p1{border-right-color: #fff;}
+.index_fiveCard li .showPhone{display: block;position: absolute;top: 55px;left: 50%;z-index: 65;transform: translateX(-50%);background: #C51114; color: #fff;padding: 10px 10px;border-radius: 4px;width: 140px;box-sizing: border-box; display: none;}
+.index_fiveCard li .showPhone::before{content: '';border-top: 8px transparent dashed;border-left: 8px transparent dashed;border-right: 8px transparent dashed;border-bottom: 8px #C51114 solid;position: relative;position: absolute;top: -16px;left: 50%;transform: translateX(-50%);}
+.index_fiveCard li .showPhone .child{overflow: hidden;padding: 8px 0;}
+.index_fiveCard li .showPhone .icon{float: left;width: 20px;height: 20px;overflow: hidden;background: url(../images/R-icon.png) no-repeat 0 0/100% 100%;}
+.index_fiveCard li .showPhone .child:nth-child(2) .icon{background-image:url(../images/R-icon1.png);}
+.index_fiveCard li .showPhone .child:nth-child(3) .icon{background-image:url(../images/R-icon2.png);}
+.index_fiveCard li .showPhone .num{float: left; margin-left: 8px;}
+.index_fiveCard li:hover .showPhone{background-color: #fff;box-shadow: 0 0 6px rgba(0,0,0,0.2);color: #C51114; display: block;}
+.index_fiveCard li:hover .showPhone::before{border-bottom-color: #fff;}
+.index_fiveCard li:hover .showPhone .child:nth-child(1) .icon{background-image:url(../images/R-icon3.png);}
+.index_fiveCard li:hover .showPhone .child:nth-child(2) .icon{background-image:url(../images/R-icon4.png);}
+.index_fiveCard li:hover .showPhone .child:nth-child(3) .icon{background-image:url(../images/R-icon5.png);}
 
 /* 创业必备服务*/
 .index-ctbox2 li{float: left;width: 23%;height: 150px;background: #fff;box-sizing: border-box;padding: 20px;position: relative;border-radius: 5px;margin-top: 10px;margin-right: 2.6%;}
@@ -30,26 +47,32 @@
 .index-ctbox2 li .tit{display: block;font-size: 16px;line-height: 30px;position: relative;margin-bottom: 30px;}
 .index-ctbox2 li .tit::after{content: "";width: 30px;height: 3px;background: #C51114;position: absolute;bottom: -3px;left: 0;}
 .index-ctbox2 li .icon{width: 30px;height: 30px;display: block;position: absolute;right: 20px;top: 25px;}
+.index-ctbox2 li:hover{box-shadow: 0 0 8px rgba(232, 0, 0, 0.5); outline: 1px solid #c51114; color: #C51114;}
+.index-ctbox2 li:hover .tit{font-weight: bold;}
+
 
 /* 服务优势*/
 .indx-myService .list{width: 33.3%;padding-right: 120px;box-sizing: border-box; }
 .indx-myService .list .item{position: relative;text-align: right;padding-bottom: 30px;}
 .indx-myService .list .item:last-child{padding-bottom: 0;}
 .indx-myService .list .arrow{position: absolute;top:5px;right: -120px;width: 110px;height: 72px; display: block;}
+.indx-myService .list .item .icon{width: 28px;height: 28px;position: absolute;top: 3px;left: 0; display: none;}
 .indx-myService .list.right{padding-left: 120px;padding-right: 0;}
 .indx-myService .list.right .item{text-align: left;}
 .indx-myService .list.right .arrow{left: -120px;right: auto;}
 .indx-myService .list .item h1{font-size: 18px;padding-bottom: 10px;font-weight: bold;}
 .indx-myService .list .item p{height: 72px;}	
 .indx-myService .Mpic{width: 33.3%; text-align: center; vertical-align: middle;} 
-.indx-myService .Mpic img{width: 90%;height: auto; display: block;margin: 0 auto;}
+.indx-myService .Mpic img{width: 90%;height: auto; display: block;margin: 0 auto;transition: all 0.5s;}
+.indx-myService .Mpic:hover img{transform: scale(1.2);}
+.indx-myService .list .item:hover{color: #C51114;}
 
 
 /* 首页-服务流程*/
 .indx-servicebox{background: url(../images/home-img2.jpg) repeat;padding-bottom: 60px;}
-.indx-servicebox li{width: 20%;float: left;margin-top: 30px;position: relative;}
+.indx-servicebox li{width: 20%;float: left;margin-top: 30px;position: relative; color: #e2e2e2;}
 .indx-servicebox li .number{font-size: 50px;line-height: 40px;position: absolute;left: 65%;top: 0;}
-.indx-servicebox li .icon{width: 45px;height: 45px;display: block;margin: 0 auto;}
+.indx-servicebox li .icon{width: 45px;height: 45px;display: block;margin: 0 auto;transition: all 0.3s;}
 .indx-servicebox li h1{font-size: 18px;line-height: 24px;margin:30px 0 20px 0;position: relative;}
 .indx-servicebox li h1::after{content: '';width: 30%;height: 1px;background: #e19f15;position: absolute;right: 0;top: 11px;}
 .indx-servicebox li h1::before{content: '';width: 30%;height: 1px;background: #e19f15;position: absolute;left: 0;top: 11px;}
@@ -59,32 +82,42 @@
 .indx-servicebox li:first-child h1::before{width: 0;}
 .indx-servicebox li:last-child h1::after{width: 0;}
 .indx-servicebox li:last-child h1 .dian{display: none;}
+.indx-servicebox li:hover{color: #fff;text-shadow: 0 0 3px rgba(0,0,0,1);}
+.indx-servicebox li:hover .icon{transform: scale(1.2);}
 
 /* 资讯动态*/
 .ind-information li{float: left;width: 30%;position: relative;box-sizing: border-box;margin-right: 5%;}
 .ind-information li:last-child{margin-right: 0;}
-.ind-information li .pic{width: 100%;height:252px ;}
-.ind-information li .pic img{width: 100%;height: 100%;}
+.ind-information li .pic{width: 100%;height:252px ;overflow: hidden;}
+.ind-information li .pic img{width: 100%;height: 100%;transition: all 0.5s;}
 .ind-information li .infor{padding: 15px 4%;border: 1px solid #ddd;box-sizing: border-box;border-top: 0;}
 .ind-information li h1{font-size:16px;margin-bottom: 5px;font-weight: bold;}
 .ind-information li .text{font-size: 13px;line-height: 20px;height: 40px;margin: 10px 0 15px 0;}
 .ind-information li .arrow{width: 25px;height: 10px; display: block;}
+.ind-information li:hover .infor{color: #C51114;}
+.ind-information li:hover .pic img{transform: scale(1.2);}
 
 /* 合作伙伴*/
 .ind_partners{background: url(../images/home-img12.jpg) no-repeat 0 0/100% 100%;}
-.ind_partners ul li{float: left;width: 22%;margin-right: 4%;height: 132px;margin-top: 30px;background: #fff;box-shadow: 0 0 5px rgba(153, 153, 153, 0.2);}
+.ind_partners ul li{float: left;width: 22%;margin-right: 4%;height: 132px;margin-top: 30px;background: #fff;box-shadow: 0 0 5px rgba(153, 153, 153, 0.2);overflow: hidden;}
 .ind_partners ul li:nth-of-type(4n){margin-right: 0;}
-.ind_partners ul li img{width: 100%;height: 100%;display: block;}
+.ind_partners ul li img{width: 100%;height: 100%;display: block;transition: all 0.5s;}
+.ind_partners ul li:hover img{transform: scale(1.2);}
+
 
 
 /******************* 以下自适应样式 *******************/
 @media only screen and (max-width: 1050px){
-	.index_fiveCard li{padding-top: 30px;}
+	.index_fiveCard li{ height: 380px;}
+	.index_fiveCard li .box{padding-top: 30px;}
 	.index_fiveCard li .p1{font-size: 18px;}
+	.index_fiveCard li p {height: 180px;}
 	.index_fiveCard li .infor{padding-bottom: 30px;}
-	.index_fiveCard li:nth-child(2){ padding-bottom: 100px;}
-	.index_fiveCard li:nth-child(3){ padding-bottom: 40px;}
-	.index_fiveCard li:nth-child(4){ padding-bottom: 80px;}
+	.index_fiveCard li:nth-child(1){border-bottom: 80px solid #fff;}
+	.index_fiveCard li:nth-child(2){border-bottom: 0px solid #fff;}
+	.index_fiveCard li:nth-child(3){border-bottom: 60px solid #fff;}
+	.index_fiveCard li:nth-child(4){border-bottom: 35px solid #fff;}
+	.index_fiveCard li:nth-child(5){border-bottom: 70px solid #fff;}
 	
 	.index-ctbox2 li{height: 172px;}
 	.indx-myService .list{padding-right: 50px;}
@@ -107,14 +140,22 @@
 }
 
 @media only screen and (max-width: 500px){
-	.index_fiveCard li{width: 32%;  margin-right: 2%;padding-top: 20px;margin-bottom: 15px;padding-bottom: 20px!important;}
-	.index_fiveCard li:nth-child(3){margin-right: 0;}
+	
+	.index_fiveCard .cont ul {margin-left: 0px;background: url(../images/home-img0.jpg) no-repeat center top/auto 100%;height: auto;width: 103%;}
+	.index_fiveCard li{width: 50%;height: 265px;border-bottom:10px solid #fff!important;border-left:0px solid #fff!important;border-right:10px solid #fff!important}
+	.index_fiveCard li:nth-child(6){display: block;}
+	.index_fiveCard li .box{padding-top: 30px;}
 	.index_fiveCard li p{padding: 0 6px;font-size: 13px;height: 140px;}
 	.index_fiveCard li .p1{font-size: 16px;}
 	.index_fiveCard li .infor .btn{width: 80px;line-height: 30px;height: 30px;font-size: 14px;}
 	.index_fiveCard li .infor{padding-bottom: 20px;}
+	.index_fiveCard li .showPhone .icon {width: 15px;height: 15px;}
+	.index_fiveCard li .showPhone .num{font-size: 13px;margin-left: 4px;line-height: 15px;}
+	.index_fiveCard li:hover .showPhone{width: 116px;}
+	.index_fiveCard li .showPhone{padding: 8px 5px;}
 	
-	.index-ctbox2 li{width: 48%;height: 135px; margin-top: 15px; padding: 15px 3%;}
+	
+	.index-ctbox2 li{width: 48%;height: 120px; margin-top: 15px; padding: 15px 3%;}
 	.index-ctbox2 li:nth-child(2n){margin-right: 0;float: right;}
 	.index-ctbox2 li .tit{font-size: 15px; margin-bottom: 15px;}
 	.index-ctbox2 li .icon{top: 18px;}
@@ -133,14 +174,18 @@
 	.indx-myService .list{width: 100%;padding-right: 0px;}
 	.indx-myService .list .icon{width: 16px;height: 16px;top: 3px;}
 	.indx-myService .list .arrow{display: none;}
-	.indx-myService .list .item{padding: 0 0 20px 0!important;text-align: left;}
+	.indx-myService .list .item{padding: 0 0 20px 40px!important;text-align: left;}
 	.indx-myService .list .item h1{font-size: 15px;padding-bottom: 5px;}
 	.indx-myService .list .item p{font-size: 13px;line-height: 20px;height: auto;}
 	.indx-myService .list.right .arrow{left: -60px;}
 	.indx-myService .list.right{padding-left: 0;}
 	.indx-myService .list.right .item{padding-left: 20px;}
+	.indx-myService .list .item .icon{display: block;}
 	
-	.ind-information li{margin-right: 3%;width: 31.3%;}
+	
+	
+	.ind-information li{margin-right: 3%;width: 48%;margin-bottom: 15px;}
+	.ind-information li:nth-child(2n){margin-right: 0;float: right;}
 	.ind-information li h1{font-size: 14px;margin-bottom: 0;}
 	.ind-information li .text{font-size: 12px; margin: 5px 0 10px 0;}
 	.ind-information li .infor{padding: 10px;}
@@ -149,14 +194,14 @@
 	.ind_partners ul li{margin-top: 15px;}
 }
 @media only screen and (max-width:768px){
-	.ind-information li .pic{height: 152px;}
+	.ind-information li .pic{height: 151px;}
 	.ind_partners ul li{height: 80px;}
 }
 @media only screen and (max-width:414px){
 	.ind_partners ul li{height: 43px;}
-	.ind-information li .pic{height: 85px;}
+	.ind-information li .pic{height: 130px;}
 }
 @media only screen and (max-width:375px){
 	.ind_partners ul li{height: 39px;}
-	.ind-information li .pic{height: 77px;}
+	.ind-information li .pic{height: 118px;}
 }
