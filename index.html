@@ -10,11 +10,13 @@
 		<title>首页</title>
 		<script src="./js/vue.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.waypoints.js"></script>
 		<script type="text/javascript" src="js/include.js"></script>
 		<script type="text/javascript" src="js/base.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/public.css">
 		<link type="text/css" rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/animate/animate.min.css">
+		
 	</head>
 
 <body>
@@ -81,22 +83,22 @@
 				</div>
 				<div class="index-ctbox2">
 					<ul class="clearfix">
-						<li class="animated bounceInLeft">
+						<li>
 							<h1 class="tit">注册公司</h1>
 							<p class="">创业者精选服务，为您的企业发展助力</p>
 							<img class="icon" src="images/home-icon2.png" alt="">
 						</li>
-						<li class="animated bounceInLeft">
+						<li>
 							<h1 class="tit">代理记账</h1>
 							<p class="">会计核算不健全，缔元智能财税解决您的记账问题</p>
 							<img class="icon" src="images/home-icon3.png" alt="">
 						</li>
-						<li class="animated bounceInRight">
+						<li>
 							<h1 class="tit">资质代办</h1>
 							<p class="">创业企业必备，高效安全，一步到位，超高性价比</p>
 							<img class="icon" src="images/home-icon4.png" alt="">
 						</li>
-						<li class="animated bounceInRight">
+						<li>
 							<h1 class="tit">社保办理</h1>
 							<p class="">挂靠、代扣代缴</p>
 							<img class="icon" src="images/home-icon4.1.png" alt="">
@@ -114,42 +116,42 @@
 			</div>
 			<div class="indx-myService clearfix">
 				<div class="list left fl">
-					<div class="item animated bounceInLeft">
+					<div class="item">
 						<img class="icon" src="images/home-icon15.png"/>
 						<img class="arrow" src="images/home-icon6.png" >
 						<h1>我们的流程</h1>
 						<p>5分钟快速响应，互联网+标准化流程，简单快捷，科学高效，为企业保价护航</p>
 					</div>
-					<div class="item animated bounceInLeft">
+					<div class="item">
 						<img class="icon" src="images/home-icon16.png"/>
 						<img class="arrow" src="images/home-icon6.png" >
 						<h1>我们的承诺</h1>
 						<p>全程透明，服务产品化定制规范，全程监控跟踪业务，进度实时查询跟进</p>
 					</div>
-					<div class="item animated bounceInLeft">
+					<div class="item">
 						<img class="icon" src="images/home-icon17.png"/>
 						<img class="arrow" src="images/home-icon6.png" >
 						<h1>我们的售后</h1>
 						<p>定期进行质量跟踪服务，随时了解服务的办理情况，随时提供支持，根据需要，进行服务支持</p>
 					</div>
 				</div>
-				<div class="Mpic fl flipInX animated">
+				<div class="Mpic fl">
 					<img src="images/company-changes-icon17.png" >
 				</div>
 				<div class="list right fr">
-					<div class="item animated bounceInRight">
+					<div class="item">
 						<img class="icon" src="images/home-icon18.png"/>
 						<img class="arrow" src="images/home-icon5.png" >
 						<h1>我们的经验</h1>
 						<p>年行业经验，已成功为23000多家公司免费注册公司，3000余家代账客户资源，数万家客户的选择，值得信赖</p>
 					</div>
-					<div class="item  animated bounceInRight">
+					<div class="item">
 						<img class="icon" src="images/home-icon19.png"/>
 						<img class="arrow" src="images/home-icon5.png" >
 						<h1>我们的实力</h1>
 						<p>服务人员均数年以上从业经验，10年以上会计68名，3年以上会计128名，均是业内顶尖人员，专业，放心</p>
 					</div>
-					<div class="item  animated bounceInRight">
+					<div class="item">
 						<img class="icon" src="images/home-icon20.png"/>
 						<img class="arrow" src="images/home-icon5.png" >
 						<h1>我们的服务</h1>
@@ -169,7 +171,7 @@
 				</div>
 				<div>
 					<ul class="clearfix">
-						<li  class="animated bounceInUp" v-for="(item,index) in indshareLis" :key="index">
+						<li v-for="(item,index) in indshareLis" :key="index">
 							<img class="icon" :src="item.iconUrl" alt="">
 							<h1>{{item.title}}<img class="dian" :src="item.dian" ></h1>
 							<p v-for="(child,index) in item.text" :key="index">{{child}}</p>
@@ -186,7 +188,7 @@
 				<p>您想要的都在这里，咨询就解决</p>
 			</div>
 			<div class="ind-information pdb100 oh">
-				<ul class="clearfix animated flipInX">
+				<ul class="clearfix">
 					<li v-for="(item,index) in newsData" :key="index">
 						<a href="newsDetail.html">
 							<div class="pic">
@@ -216,7 +218,7 @@
 				</div>
 				<div>
 					<ul class="clearfix">
-						<li class="animated flipInX"  v-for="(item,index) in partnerData" :key="index"><img :src="item" alt=""></li>
+						<li v-for="(item,index) in partnerData" :key="index"><img :src="item" alt=""></li>
 					</ul>
 				</div>
 			</div>
@@ -338,5 +340,61 @@
 		    
 		    }
 		});
+	</script>
+	<script type="text/javascript">
+		
+		$('.index-ctbox2 li').css('opacity','0');
+		$('.index-ctbox2 li').waypoint(function() {
+			$(".index-ctbox2 li").each(function(k) {
+				var el = $(this);
+				setTimeout(function() {
+					el.addClass('animated slideInDown');
+					el.css('opacity','1');
+				}, k * 100, 'easeInOutExpo');
+			});
+		},{offset: '75%' });
+		
+		$('.indx-myService .list.left').waypoint(function() {
+		  $(".indx-myService .list.left").addClass('animated slideInLeft');
+		  $(".indx-myService .list.left").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.indx-myService .Mpic').waypoint(function() {
+		  $(".indx-myService .Mpic").addClass('animated flipInX');
+		  $(".indx-myService .Mpic").css('opacity','1');
+		}, { offset: '70%' });
+		$('.indx-myService .list.right').waypoint(function() {
+		  $(".indx-myService .list.right").addClass('animated slideInRight');
+		  $(".indx-myService .list.right").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.indx-servicebox li').css('opacity','0');
+		$('.indx-servicebox li').waypoint(function() {
+			$(".indx-servicebox li").each(function(k) {
+				var el = $(this);
+				setTimeout(function() {
+					el.addClass('animated slideInLeft');
+					el.css('opacity','1');
+				}, k * 100, 'easeInOutExpo');
+			});
+		},{offset: '75%' });
+		
+		$('.ind-information li').css('opacity','0');
+		$('.ind-information li').waypoint(function() {
+			$(".ind-information li").each(function(k) {
+				var el = $(this);
+				setTimeout(function() {
+					el.addClass('animated slideInRight');
+					el.css('opacity','1');
+				}, k * 100, 'easeInOutExpo');
+			});
+		},{offset: '75%' });
+		
+		
+		$('.ind_partners li').waypoint(function() {
+		  $(".ind_partners li").addClass('animated flipInX');
+		  $(".ind_partners li").css('opacity','1');
+		}, { offset: '70%' });
+		
 	</script>
 </html>

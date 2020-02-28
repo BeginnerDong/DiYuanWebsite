@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/include.js"></script>
 		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/jquery.waypoints.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/public.css">
 		<link rel="stylesheet" type="text/css" href="css/change.css">
 		<link rel="stylesheet" type="text/css" href="css/property.css">
@@ -39,7 +40,7 @@
 					<div class="title fs30 center"><span class="xian left"></span><em>变更范围</em><span class="xian right"></span></div>
 					<p>全程一站式工商变更平台</p>
 				</div>
-				<div class="cont clearfix animated fadeInUp">
+				<div class="cont clearfix">
 					<div class="item">
 						<img class="icon" src="images/company-changes-icon.png" >
 						<p>公司变更名称</p>
@@ -79,7 +80,7 @@
 					<div class="title fs30 center"><span class="xian left"></span><em>变更流程</em><span class="xian right"></span></div>
 					<p>交给缔元智能财税，一切就是这么简单</p>
 				</div>
-				<div class="cont clearfix  animated fadeInLeft">
+				<div class="cont clearfix">
 					<div class="item">
 						<div class="icon">
 							<img src="images/company-changes-icon9.png" >
@@ -116,7 +117,7 @@
 					<p>全程一站式知识产权注册平台</p>
 				</div>
 				<div class="clearfix center white">
-					<div class="item animated fadeInRight" v-for="(item,index) in bookLis" :key="index">
+					<div class="item" v-for="(item,index) in bookLis" :key="index">
 						<img class="icon" :src="item.iconUrl" alt="">
 						<h1>{{item.title}}</h1>
 						<p>{{item.text}}</p>
@@ -133,11 +134,11 @@
 					<div class="title fs30 center"><span class="xian left"></span><em>变更优势</em><span class="xian right"></span></div>
 					<p>你的专利，我们贴心保障</p>
 				</div>
-				<div class="clearfix center">
-					<div class="left fl animated flipInX">
+				<div class="clearfix center cont">
+					<div class="left fl">
 						<img src="images/company-changes-icon17.png" >
 					</div>
-					<div class="clearfix right fr animated flipInX">
+					<div class="clearfix right fr">
 						<div class="item" v-for="(item,index) in youshiData" :key="index">
 							<img class="icon" :src="item.iconUrl" alt="">
 							<h1>{{item.title}}</h1>
@@ -156,12 +157,10 @@
 					<p>营业执照信息发生变化，随即变更，避免一切风险</p>
 				</div>
 				<div class="cont clearfix center">
-					<img class="pic w animated flipInX" src="images/company-changes-img4.png" >
+					<img class="pic w" src="images/company-changes-img4.png" >
 				</div>
 			</div>
 		</div>
-		
-		
 		
 		
 		<!-- 缔元财税，专业顾问，一站式一对一服务 -->
@@ -244,5 +243,55 @@
 				
 		    }
 		});
+	</script>
+	<script type="text/javascript">
+		$('.changeBox1 .cont').waypoint(function() {
+		  $(".changeBox1 .cont").addClass('animated fadeInDown');
+		  $(".changeBox1 .cont").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.changeBox2 .item').css('opacity','0');
+		$('.changeBox2 .item').waypoint(function() {
+			$(".changeBox2 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated flipInY');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.propertyBox2 .item').css('opacity','0');
+		$('.propertyBox2 .item').waypoint(function() {
+			$(".propertyBox2 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated fadeInLeft');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		
+		$('.changeBox3 .cont .left').waypoint(function() {
+		  $(".changeBox3 .cont .left").addClass('animated fadeInLeft');
+		  $(".changeBox3 .cont .left").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.changeBox3 .item').css('opacity','0');
+		$('.changeBox3 .item').waypoint(function() {
+			$(".changeBox3 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated fadeInRight');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.changeBox4 .cont .pic').waypoint(function() {
+		  $(".changeBox4 .cont .pic").addClass('animated flipInX');
+		  $(".changeBox4 .cont .pic").css('opacity','1');
+		}, { offset: '70%' });
 	</script>
 </html>

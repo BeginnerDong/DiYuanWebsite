@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/include.js"></script>
 		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/jquery.waypoints.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/public.css">
 		<link rel="stylesheet" type="text/css" href="css/agent.css">
 		<link rel="stylesheet" href="css/animate/animate.min.css">
@@ -66,13 +67,13 @@
 					<p>实力说明一切</p>
 				</div>
 				<div class="cont clearfix">
-					<div class="left fl animated bounceInLeft">
+					<div class="left fl">
 						<div class="title">其他公司</div>
 						<div class="infor color6">
 							<p  v-for="(item,index) in otherAdvtgData" :key="index"><span>{{item}}</span></p>
 						</div>
 					</div>
-					<div class="right fr  animated bounceInRight">
+					<div class="right fr">
 						<div class="title">缔元财税</div>
 						<div class="infor">
 							<div class="item" v-for="(item,index) in ourAdvtgData" :key="index">
@@ -98,7 +99,7 @@
 					<p>在缔元记账报税，每月资深会计做账票据，您身边的财税专家</p>
 				</div>
 				<div class="clearfix center white">
-					<div class="item animated fadeInUp" v-for="(item,index) in bookLis" :key="index">
+					<div class="item" v-for="(item,index) in bookLis" :key="index">
 						<h2 class="number">{{item.number}}</h2>
 						<img class="icon" :src="item.iconUrl" alt="">
 						<h1>{{item.title}}</h1>
@@ -231,5 +232,49 @@
 				
 		    }
 		});
+	</script>
+
+	<script type="text/javascript">
+		$('.agentbkBox1 .item').css('opacity','0');
+		$('.agentbkBox1 .item').waypoint(function() {
+			$(".agentbkBox1 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated slideInUp');
+		            el.css('opacity','1');
+		        }, k * 200, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.agentbkBox2 .cont .left').waypoint(function() {
+		  $(".agentbkBox2 .cont .left").addClass('animated bounceInLeft');
+		  $(".agentbkBox2 .cont .left").css('opacity','1');
+		}, { offset: '70%' });
+		$('.agentbkBox2 .cont .right').waypoint(function() {
+		  $(".agentbkBox2 .cont .right").addClass('animated bounceInRight');
+		  $(".agentbkBox2 .cont .right").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.agentbkBox3 .item').css('opacity','0');
+		$('.agentbkBox3 .item').waypoint(function() {
+			$(".agentbkBox3 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated slideInDown');
+		            el.css('opacity','1');
+		        }, k * 200, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.agentbkBox4 .item').css('opacity','0');
+		$('.agentbkBox4 .item').waypoint(function() {
+			$(".agentbkBox4 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated flipInX');
+		            el.css('opacity','1');
+		        }, k * 200, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
 	</script>
 </html>

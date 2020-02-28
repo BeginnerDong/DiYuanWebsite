@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/include.js"></script>
 		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/jquery.waypoints.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/public.css">
 		<link rel="stylesheet" type="text/css" href="css/zizhi.css">
 		<link rel="stylesheet" href="css/animate/animate.min.css">
@@ -41,21 +42,21 @@
 					<p>自成立已服务50000+家客户</p>
 				</div>
 				<div class="contain clearfix center">
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<h1>资质代办经验</h1>
 						<div class="infor">
 							<div class="number">5<em>天</em></div>
 							<p>5年资深行业各类资质代办经验。政策变化全掌握</p>
 						</div>
 					</div>
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<h1>高速极速代办</h1>
 						<div class="infor">
 							<div class="number">98<em>%</em></div>
 							<p>全程一站式资质服务，成功率高。首次通过率98%，二次通过率100%</p>
 						</div>
 					</div>
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<h1>资质代办经验</h1>
 						<div class="infor">
 							<div class="number">30<em>天</em></div>
@@ -139,10 +140,7 @@
 				</div>
 				<div class="">
 					<ul class="clearfix">
-						<li class="liImg one">
-							<img class="ctImg" src="images/zizhi-img2.png" />
-						</li>
-						<li class="left animated fadeInLeft">
+						<li class="left">
 							<h1>缔元智能财税</h1>
 							<p><em>资深专业申报人员，无需企业操心<br/>资质细节了解彻底，审批流畅</em></p>
 							<p><em>有效时间内高效完成效率，通过率高</em></p>
@@ -152,10 +150,10 @@
 							<p><em>全程监控跟踪，业务进度时查询跟进</em></p>
 							<p><em>售后服务跟踪，无后顾之忧</em></p>
 						</li>
-						<li class="liImg two animated flipInX">
+						<li class="liImg two">
 							<img class="ctImg" src="images/zizhi-img2.png" />
 						</li>
-						<li class="right animated fadeInRight">
+						<li class="right">
 							<h1>传统代办</h1>
 							<p><em>资质申请流程复杂，专业度高资质标准细节不清楚，审批反复</em></p>
 							<p><em>办理周期流程长，通过率低</em></p>
@@ -236,5 +234,46 @@
 				
 		    }
 		});
+	</script>
+	<script type="text/javascript">
+		$('.zizhiBox1 .item').css('opacity','0');
+		$('.zizhiBox1 .item').waypoint(function() {
+			$(".zizhiBox1 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated slideInDown');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.zizhiBox2 .item').css('opacity','0');
+		$('.zizhiBox2 .item').waypoint(function() {
+			$(".zizhiBox2 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated slideInLeft');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.zizhiBox3 .cont').waypoint(function() {
+		  $(".zizhiBox3 .cont").addClass('animated slideInUp');
+		  $(".zizhiBox3 .cont").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.qualiftBox4 li.left').waypoint(function() {
+		  $(".qualiftBox4 li.left").addClass('animated fadeInLeft');
+		  $(".qualiftBox4 li.left").css('opacity','1');
+		}, { offset: '70%' });
+		$('.qualiftBox4 .liImg').waypoint(function() {
+		  $(".qualiftBox4 .liImg").addClass('animated flipInX');
+		  $(".qualiftBox4 .liImg").css('opacity','1');
+		}, { offset: '70%' });
+		$('.qualiftBox4 li.right').waypoint(function() {
+		  $(".qualiftBox4 li.right").addClass('animated fadeInRight');
+		  $(".qualiftBox4 li.right").css('opacity','1');
+		}, { offset: '70%' });
 	</script>
 </html>

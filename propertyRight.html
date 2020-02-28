@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/include.js"></script>
 		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/jquery.waypoints.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/public.css">
 		<link rel="stylesheet" type="text/css" href="css/property.css">
 		<link rel="stylesheet" href="css/animate/animate.min.css">
@@ -58,7 +59,7 @@
 					<p>全程一站式社保服务平台</p>
 				</div>
 				<div class="clearfix center white">
-					<div class="item animated fadeInUp" v-for="(item,index) in bookLis" :key="index">
+					<div class="item" v-for="(item,index) in bookLis" :key="index">
 						<img class="icon" :src="item.iconUrl" alt="">
 						<h1>{{item.title}}</h1>
 						<p>{{item.text}}</p>
@@ -76,20 +77,20 @@
 				</div>
 				<div class="">
 					<ul class="clearfix">
-						<li class="left animated fadeInUp">
+						<li class="left">
 							<span style="background: #fd5f5f;">价格</span>
 							<span style="background: #46d36b;">办理流程</span>
 							<span style="background: #5fa5fd;">服务</span>
 							<span style="background: #ffae13;">团队</span>
 						</li>
-						<li class="middle animated fadeInLeft">
+						<li class="middle">
 							<h1>缔元智能财税社保业务办理</h1>
 							<p><em>明码标价，价格透明</em></p>
 							<p><em>严格按照承诺时间完成全部流程，将申请时间缩短</em></p>
 							<p><em>平台监管，随时处理服务质量问题</em></p>
 							<p><em>专业团队，快速高效，数百名专业顾问随时</em></p>
 						</li>
-						<li class="right animated fadeInRight">
+						<li class="right">
 							<h1>其他公司社保业务办理</h1>
 							<p><em>价格混乱，需要用心甄别</em></p>
 							<p><em>托人办理时效慢</em></p>
@@ -109,17 +110,17 @@
 					<p>快速办理，放心无忧</p>
 				</div>
 				<div class="cont clearfix">
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<h1>无延时</h1>
 						<p>及时申报，无延时报送，防止逾期</p>
 						<span class="btn">点击办理</span>
 					</div>
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<h1>高效可靠</h1>
 						<p>及时反馈申报信息</p>
 						<span class="btn">点击办理</span>
 					</div>
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<h1>人员增减</h1>
 						<p>确认人员流动，及时办理人员增减业务</p>
 						<span class="btn">点击办理</span>
@@ -136,22 +137,22 @@
 					<p>有效提高成功率</p>
 				</div>
 				<div class="cont clearfix center">
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<img class="icon" src="images/chanquan-icon10.png" >
 						<h1>免费查询</h1>
 						<p>30秒快速反馈查询结果</p>
 					</div>
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<img class="icon" src="images/chanquan-icon11.png" >
 						<h1>双重检索</h1>
 						<p>严格把关，降低注册风险</p>
 					</div>
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<img class="icon" src="images/chanquan-icon12.png" >
 						<h1>多种解决方案</h1>
 						<p>提高注册成功率</p>
 					</div>
-					<div class="item animated fadeInUp">
+					<div class="item">
 						<img class="icon" src="images/chanquan-icon13.png" >
 						<h1 class="">一对一专属顾问</h1>
 						<p>7x24小时提供专业解答</p>
@@ -196,7 +197,7 @@
 				</div>
 				<div class="bigTit center white pubbj">免费终身享受售后服务</div>
 				<div class="cont clearfix center">
-					<div class="item animated fadeInUp" v-for="(item,index) in shouhouData" :key="index">
+					<div class="item" v-for="(item,index) in shouhouData" :key="index">
 						<h1>{{item.title}}</h1>
 						<div class="M">
 							<img class="icon" :src="item.iconUrl"/>
@@ -297,4 +298,85 @@
 		    }
 		});
 	</script>
+
+	<script type="text/javascript">
+		$('.propertyBox1 .cont img').waypoint(function() {
+		  $(".propertyBox1 .cont img").addClass('animated flipInX');
+		  $(".propertyBox1 .cont img").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.propertyBox2 .item').css('opacity','0');
+		$('.propertyBox2 .item').waypoint(function() {
+			$(".propertyBox2 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated slideInDown');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.propertyBox3 li.left').waypoint(function() {
+		  $(".propertyBox3 li.left").addClass('animated fadeInUp');
+		  $(".propertyBox3 li.left").css('opacity','1');
+		}, { offset: '70%' });
+		$('.propertyBox3 li.middle').waypoint(function() {
+		  $(".propertyBox3 li.middle").addClass('animated fadeInLeft');
+		  $(".propertyBox3 li.middle").css('opacity','1');
+		}, { offset: '70%' });
+		$('.propertyBox3 li.right').waypoint(function() {
+		  $(".propertyBox3 li.right").addClass('animated fadeInRight');
+		  $(".propertyBox3 li.right").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.propertyBox4 .item').css('opacity','0');
+		$('.propertyBox4 .item').waypoint(function() {
+			$(".propertyBox4 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated flipInX');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.propertyBox5 .item').css('opacity','0');
+		$('.propertyBox5 .item').waypoint(function() {
+			$(".propertyBox5 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated flipInY');
+		            el.css('opacity','1');
+		        }, k * 100, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.propertyBox6 .item').css('opacity','0');
+		$('.propertyBox6 .item').waypoint(function() {
+			$(".propertyBox6 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated slideInDown');
+		            el.css('opacity','1');
+		        }, k * 200, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+		
+		$('.propertyBox7 .bigTit').waypoint(function() {
+		  $(".propertyBox7 .bigTit").addClass('animated fadeInDown');
+		  $(".propertyBox7 .bigTit").css('opacity','1');
+		}, { offset: '70%' });
+		
+		$('.propertyBox7 .item').css('opacity','0');
+		$('.propertyBox7 .item').waypoint(function() {
+			$(".propertyBox7 .item").each(function(k) {
+		        var el = $(this);
+		        setTimeout(function() {
+		            el.addClass('animated slideInUp');
+		            el.css('opacity','1');
+		        }, k * 200, 'easeInOutExpo');
+		    });
+		}, { offset: '75%' });
+	</script>
+
 </html>

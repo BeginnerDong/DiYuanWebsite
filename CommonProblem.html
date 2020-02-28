@@ -1,3 +1,4 @@
+
 <div id="CommonProblem">
 	<div class="bjgayf5 register_quest pdb100">
 		<div class="w1200 oh">
@@ -7,22 +8,22 @@
 			</div>
 			<div class="">
 				<ul>
-					<li class="animated bounceInUp">
+					<li>
 						<span class="num">01</span>
 						<h1>我没有注册地址，听说虚拟地址可以注册公司，你们这里提供虚拟地址吗？</h1>
 						<p>当您不想花高额的租金写字楼，您可以用我们提供的虚拟地址来注册公司，我们提供的这些虚拟地址都是工商局备过案的，您可以放心使用。</p>
 					</li>
-					<li class="animated bounceInUp">
+					<li>
 						<span class="num">02</span>
 						<h1>注册100万的公司，需要一次交清吗？</h1>
 						<p>不用，2014年3月1日后，公司注册改革，注册资本从实缴改为认缴，也就说，你现在只需要拿出1元，即可注册。</p>
 					</li>
-					<li  class="animated bounceInUp">
+					<li>
 						<span class="num">03</span>
 						<h1>认缴是随便写注册资本数额吗？</h1>
 						<p>公司认缴的出资额将通过“市企业信用信息网”向社会公式，因此，请股东在认缴出资时充分自身考虑所具备的投资能力，理性确定认缴金额。</p>
 					</li>
-					<li class="animated bounceInUp">
+					<li>
 						<span class="num">04</span>
 						<h1>我以前注册的公司被吊销了？能注册新公司吗？</h1>
 						<p>不行，被吊销后你会上工商和税务机关的黑名单，工商一般3年自动解除，税务必须缴纳罚款后才能解除。</p>
@@ -55,6 +56,20 @@
 	    }
 	});   
 </script>
+<script type="text/javascript">
+	$('.register_quest li').css('opacity','0');
+	$('.register_quest li').waypoint(function() {
+		$(".register_quest li").each(function(k) {
+	        var el = $(this);
+	        setTimeout(function() {
+	            el.addClass('animated fadeInLeft');
+	            el.css('opacity','1');
+	        }, k * 300, 'easeInOutExpo');
+			
+	    });
+	}, { offset: '70%' });
+</script>
+
 <style type="text/css">
 
 	/* 常见问题 */
