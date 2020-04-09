@@ -105,7 +105,7 @@
 	
 	.propertyBox2 .item {padding: 15px 2%;}
 	.propertyBox2 .item .icon {width: 60px;height: 60px;}
-	.propertyBox2 .item h1 {font-size: 15px;padding: 15px 0 10px 0;line-height: 24px;}
+	.propertyBox2 .item h1 {font-size: 15px;padding: 15px 0 10px 0;line-height: 24px;font-weight: normal;}
 	.propertyBox2 .item p {font-size: 13px;line-height: 24px;}
 	
 	.propertyBox3 li{width: 50%;}
@@ -132,6 +132,8 @@
 	.propertyBox5 .item:nth-child(2n){float: right;}
 	.propertyBox5 .item .icon {width: 35px;height: 35px;}
 	.propertyBox5 .item h1 {font-size: 15px;padding: 10px 0 10px 0;}
+	
+	
 	
 	.propertyBox6 .item{width: 100%;padding: 0;height: auto;border-right:0;border-bottom: 1px dashed #e2c09a;padding-bottom: 15px;margin-bottom: 15px;}
 	.propertyBox6 .item .icon {width: 120px;height: 120px;}

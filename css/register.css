@@ -83,13 +83,13 @@
 .registerBox5 .cont .right{width: 50%;padding: 0 3%;box-sizing: border-box;margin-top: 40px;}
 .registerBox5 .cont .right p{font-size: 17px;margin-top: 30px;}
 
-.registerBox6 .item{float: left;width: 20%;height: 244px;margin:0 2.5%;padding: 30px 3%;border-radius: 5px;background-color: #fff;box-shadow:0 0 8px rgba(255, 87, 87, 0.3);box-sizing: border-box;}
+.registerBox6 .item{float: left;width: 20%;height: 154px;margin:0 2.5%;padding: 30px 3%;border-radius: 5px;background-color: #fff;box-shadow:0 0 8px rgba(255, 87, 87, 0.3);box-sizing: border-box;}
 .registerBox6 .item .icon{width: 35px;height: 35px;margin: 0 auto;background: url(../images/registered-icon15.1.png) no-repeat 0 0/100% 100%;}
 .registerBox6 .item:nth-child(1) .icon{background-image: url(../images/registered-icon15.1.png);}
 .registerBox6 .item:nth-child(2) .icon{background-image: url(../images/registered-icon16.png);}
 .registerBox6 .item:nth-child(3) .icon{background-image: url(../images/registered-icon17.png);}
 .registerBox6 .item:nth-child(4) .icon{background-image: url(../images/registered-icon18.png);}
-.registerBox6 .item h1{font-size: 18px;margin: 20px 0 15px 0;}
+.registerBox6 .item h1{font-size: 18px;margin:30px 0 10px 0;}
 .registerBox6 .item p{font-size: 15px;line-height: 30px; color: #999;}
 .registerBox6 .item:hover{background-color: #C51114; color: #fff;}
 .registerBox6 .item:hover p{color: #fff;}
@@ -138,8 +138,8 @@
 	.registerBox5 .cont .right{margin-top: 0;}
 	.registerBox5 .cont .right p{font-size: 15px;}
 	
-	.registerBox6 .item{margin: 0 1.5%;height: 200px;width: 22%;padding: 20px 10px;}
-	.registerBox6 .item h1{font-size: 16px; margin: 15px 0 10px 0;}
+	.registerBox6 .item{margin: 0 1.5%;height: 124px;width: 22%;padding: 20px 10px;}
+	.registerBox6 .item h1{font-size: 16px; margin: 20px 0 5px 0;}
 	.registerBox6 .item p{font-size: 14px;line-height: 24px;}
 	
 }
@@ -185,5 +185,6 @@
 	.registerBox5 .cont .right p {font-size: 14px;margin-top: 15px;}
 	
 	.registerBox6 .item{width: 46%;margin: 15px 2% 0 2%;}
+	.registerBox6 .item h1{font-size: 15px;}
 	
 }
