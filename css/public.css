@@ -179,7 +179,7 @@ a:link, a:visited {text-decoration: none; outline: none;}
 
 /* 页面右侧固定客服电话 */
 .R-fixd{position: fixed;top: 45%;right: 10px;z-index:65;}
-.R-fixd .item{background: #C51114;color: #fff;margin-bottom: 10px;overflow: hidden;padding: 10px;box-sizing: border-box;float: right;clear: both;}
+.R-fixd .item{background: #C51114;color: #fff;margin-bottom: 20px;overflow: hidden;padding: 10px;box-sizing: border-box;float: right;clear: both;}
 .R-fixd .item .icon{width: 20px;height: 20px;float: left;}
 .R-fixd .item .icon img{width: 100%;height: 100%;}
 .R-fixd .item p{float: left;line-height: 20px;margin-left: 8px;font-size: 14px;display: none;}
