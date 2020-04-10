@@ -51,25 +51,31 @@
 									<p class="text">{{item.price}}起</p>
 								</div>
 								<div class="infor">
-									<span class="btn center">我要办理</span>
-									<div class="showPhone">
-										<div class="child">
-											<div class="icon"></div>
-											<div class="num">18689562356</div>
-										</div>
-										<div class="child">
-											<div class="icon"></div>
-											<div class="num">81956862</div>
-										</div>
-										<div class="child">
-											<div class="icon"></div>
-											<div class="num">15689234562</div>
-										</div>
-									</div>
+									<span class="btn center" @click="handle()">我要办理</span>
 								</div>
 							</div>
 						</li>
 					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="show_card" :class="showPhone == 1?'contact_show':'contact_hidden'">
+			<div @click="closeShowPhone" style="position: absolute;right: 10px;top: 8px;">
+				<img class="closeIcon" src="./images/chanquan-icon9.png"  />
+			</div>
+			<div class="showPhone">
+				<div class="child">
+					<div class="icon"></div>
+					<div class="num">18689562356</div>
+				</div>
+				<!-- <div class="child">
+					<div class="icon"></div>
+					<div class="num">81956862</div>
+				</div> -->
+				<div class="child">
+					<div class="icon"></div>
+					<div class="num">15689234562</div>
 				</div>
 			</div>
 		</div>
@@ -181,34 +187,6 @@
 			</div>
 		</div>
 	
-		<!-- 资讯动态 -->
-		<div class="w1200">
-			<div class="pubTitle center">
-				<div class="title fs30 center"><span class="xian left"></span><em>资讯动态</em><span class="xian right"></span></div>
-				<p>您想要的都在这里，咨询就解决</p>
-			</div>
-			<div class="ind-information pdb100 oh">
-				<ul class="clearfix">
-					<li v-for="(item,index) in newsData" :key="index">
-						<a href="newsDetail.html">
-							<div class="pic">
-								<img src="images/home-img3.jpg" >
-							</div>
-							<div class="infor">
-								<h1 class="avoidOverflow">嘉泽财务位居金融产业</h1>
-								<p class="fs12 color9">2019/12/25</p>
-								<p class="text avoidOverflow2">坐拥互联网+金融行业蓬勃行业兴起之天时，区域金融产业发达之地利人和</p>
-								<div class="clearfix">
-									<img class="arrow" src="images/home-icon14.png" >
-								</div>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</div>
-			
-		</div>
-	
 		<!-- 合作伙伴 -->
 		<div class=" pdb100 ind_partners oh">
 			<div class="w1200">
@@ -315,7 +293,8 @@
 						'images/home-img6.png','images/home-img7.png',
 						'images/home-img8.png','images/home-img9.png',
 						'images/home-img10.png','images/home-img11.png',
-					]
+					],
+					showPhone:0
 		        }
 		    },
 		    created:function () {
@@ -324,6 +303,14 @@
 				 self.getMainData();	
 		    },
 		    methods: {
+				handle(){
+					var self = this;
+					self.showPhone = 1;
+				},
+				closeShowPhone(){
+					var self = this;
+					self.showPhone = 0;
+				},
 		    	getMainData: function(id) {
 		    		var self = this;
 		    		var callback = function(res) {

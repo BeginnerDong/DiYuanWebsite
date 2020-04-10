@@ -28,18 +28,18 @@
 .index_fiveCard li:hover{background:#C51114;color: #fff;}
 .index_fiveCard li:hover .infor .btn{ color: #fff;border:1px solid #fff;}
 .index_fiveCard li:hover .p1{border-right-color: #fff;}
-.index_fiveCard li .showPhone{display: block;position: absolute;top: 55px;left: 50%;z-index: 65;transform: translateX(-50%);background: #C51114; color: #fff;padding: 10px 10px;border-radius: 4px;width: 140px;box-sizing: border-box; display: none;}
-.index_fiveCard li .showPhone::before{content: '';border-top: 8px transparent dashed;border-left: 8px transparent dashed;border-right: 8px transparent dashed;border-bottom: 8px #C51114 solid;position: relative;position: absolute;top: -16px;left: 50%;transform: translateX(-50%);}
-.index_fiveCard li .showPhone .child{overflow: hidden;padding: 8px 0;}
-.index_fiveCard li .showPhone .icon{float: left;width: 20px;height: 20px;overflow: hidden;background: url(../images/R-icon.png) no-repeat 0 0/100% 100%;}
-.index_fiveCard li .showPhone .child:nth-child(2) .icon{background-image:url(../images/R-icon1.png);}
-.index_fiveCard li .showPhone .child:nth-child(3) .icon{background-image:url(../images/R-icon2.png);}
-.index_fiveCard li .showPhone .num{float: left; margin-left: 8px;}
-.index_fiveCard li:hover .showPhone{background-color: #fff;box-shadow: 0 0 6px rgba(0,0,0,0.2);color: #C51114; display: block;}
-.index_fiveCard li:hover .showPhone::before{border-bottom-color: #fff;}
+.showPhone{display: block;background-color: #fff;color: #C51114;border-radius: 4px;width: 80%;margin: 0 auto; box-sizing: border-box;padding: 10px;}
+/* .showPhone::before{content: '';border-top: 8px transparent dashed;border-left: 8px transparent dashed;border-right: 8px transparent dashed;border-bottom: 8px #fff solid;position: relative;position: absolute;top: -16px;left: 50%;transform: translateX(-50%);} */
+.showPhone .child{overflow: hidden;padding: 10px 10px; margin-bottom: 15px;border-radius: 5px;background-color: #eee;}
+.showPhone .child:last-child{margin-bottom: 0;}
+.showPhone .icon{float: left;width: 24px;height: 24px;overflow: hidden;background: url(../images/R-icon3.png) no-repeat 0 0/100% 100%;}
+.showPhone .child:nth-child(2) .icon{background-image:url(../images/R-icon4.png);}
+.showPhone .child:nth-child(3) .icon{background-image:url(../images/R-icon5.png);}
+.showPhone .num{float: left; margin-left: 15px;}
+/* .index_fiveCard li:hover .showPhone::before{border-bottom-color: #fff;}
 .index_fiveCard li:hover .showPhone .child:nth-child(1) .icon{background-image:url(../images/R-icon3.png);}
 .index_fiveCard li:hover .showPhone .child:nth-child(2) .icon{background-image:url(../images/R-icon4.png);}
-.index_fiveCard li:hover .showPhone .child:nth-child(3) .icon{background-image:url(../images/R-icon5.png);}
+.index_fiveCard li:hover .showPhone .child:nth-child(3) .icon{background-image:url(../images/R-icon5.png);} */
 
 /* 创业必备服务*/
 .index-ctbox2 li{float: left;width: 23%;height: 150px;background: #fff;box-sizing: border-box;padding: 20px;position: relative;border-radius: 5px;margin-top: 10px;margin-right: 2.6%;}

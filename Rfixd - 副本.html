@@ -1,0 +1,59 @@
+<div id="Rfixd">
+	<div class="R-fixd">
+		<div class="item" :class="curr==1?'on':''" @click="currChange(1)">
+			<div class="icon"><img src="images/R-icon.png"/></div>
+			<p>18689562356</p>
+		</div>
+		<!-- <div class="item" :class="curr==2?'on':''" @click="currChange(2)">
+			<div class="icon"><img src="images/R-icon1.png"/></div>
+			<p>81956862</p>
+		</div> -->
+		<div class="item" :class="curr==3?'on':''" @click="currChange(3)">
+			<div class="icon"><img src="images/R-icon2.png"/></div>
+			<p>15689234562</p>
+			<div class="ewm">
+				<img src="images/R-img.png" >
+			</div>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	var Rfixd = new Vue({
+	    el: '#Rfixd',
+	    data:function(){
+	        return {
+	        	is_toggle:false,
+				is_show:false,
+				curr:0
+	        }
+	    },
+	    created:function () {
+	        var self = this;
+			self.getMainData()
+	    },
+	    methods: {
+			currChange(curr){
+				 var self = this;
+				 if(curr!=self.curr){
+					self.curr = curr
+				 }else{
+					 self.curr = 0
+				 }
+			},
+			getMainData: function(id) {
+				var self = this;
+
+				var callback = (res) => {
+					console.log('getMainData', res);
+					self.mainData = res.info.data[0];
+
+				};
+				// window.base.labelGet(postData, callback);
+			},
+	        
+	    	
+	    }
+	});   
+</script>
+

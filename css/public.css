@@ -222,6 +222,14 @@ a:link, a:visited {text-decoration: none; outline: none;}
 
 /* banner 各种屏幕自适应 */
 .pubHeadBanner{width:100%;height: 800px;overflow: hidden;position: relative; }
+
+.pubHeadBanner .banner{ width: 100%; height: 100%;overflow: hidden; box-sizing: border-box;}
+.pubHeadBanner .banner .pic{ height: 100%;width: 100%; display: block; }
+
+.banBtnNav{ width: 100%; text-align: center; position: absolute; bottom:3%; left: 0;z-index: 9;}
+.banBtnNav span{ display:inline-block; margin: 0 5px; border-radius: 8px; background:#ababab; width: 15px; height: 6px;box-shadow: 0 0 5px rgba(0,0,0,0.2);}
+.banBtnNav span.active{width: 24px; opacity: 1; background: #c51114;}
+
 @media only screen and (max-width: 1600px){
 	.pubHeadBanner{height: 667px;}
 }

@@ -1,14 +1,9 @@
 <div id="Rfixd">
 	<div class="R-fixd">
-		<div class="item" :class="curr==1?'on':''" @click="currChange(1)">
+		<div class="item" :class="curr==1?'on':''" @mouseover="open()">
 			<div class="icon"><img src="images/R-icon.png"/></div>
-			<p>18689562356</p>
 		</div>
-		<div class="item" :class="curr==2?'on':''" @click="currChange(2)">
-			<div class="icon"><img src="images/R-icon1.png"/></div>
-			<p>81956862</p>
-		</div>
-		<div class="item" :class="curr==3?'on':''" @click="currChange(3)">
+		<div class="item" :class="curr==3?'on':''" @mouseover="openWx()">
 			<div class="icon"><img src="images/R-icon2.png"/></div>
 			<p>15689234562</p>
 			<div class="ewm">
@@ -16,6 +11,26 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="show_card" :class="phone_show == 1?'contact_show':'contact_hidden'">
+		<div @click="close" style="position: absolute;right: 10px;top: 8px;">
+			<img class="closeIcon" src="./images/chanquan-icon9.png"  />
+		</div>
+		<div><img class="titIcon" src="images/R-icon3.png"/></div>
+		<p>电话：81956862</p>
+	</div>
+	<div class="show_card show_cardWx" :class="wx_show == 1?'contact_show':'contact_hidden'">
+		<div @click="closeWx" style="position: absolute;right: 10px;top: 8px;">
+			<img class="closeIcon" src="./images/chanquan-icon9.png"  />
+		</div>
+		<div><img class="titIcon" src="images/R-icon5.png" ></div>
+		<p>微信：15689234562</p>
+		<div class="ewm">
+			<img src="images/R-img.png" >
+		</div>
+		<div @click="copyUrl2" class="center" style="color: #089fe3">复制微信号</div>
+	</div>
+	
 	
 </div>
 <script type="text/javascript">
@@ -25,7 +40,9 @@
 	        return {
 	        	is_toggle:false,
 				is_show:false,
-				curr:0
+				curr:0,
+				phone_show:0,
+				wx_show:0
 	        }
 	    },
 	    created:function () {
@@ -40,6 +57,32 @@
 				 }else{
 					 self.curr = 0
 				 }
+			},
+			open:function() {
+			    var self = this;
+				self.phone_show = 1;	
+			},
+			close:function() {
+			    var self = this;
+				self.phone_show = 0;
+			},
+			openWx:function() {
+			    var self = this;
+				self.wx_show = 1;	
+			},
+			closeWx:function() {
+			    var self = this;
+				self.wx_show = 0;
+			},
+			copyUrl2:function(){
+				var oInput = document.createElement('input');
+				oInput.value = '15689234562';
+				document.body.appendChild(oInput);
+				oInput.select(); // 选择对象
+				document.execCommand("Copy"); // 执行浏览器复制命令
+				oInput.className = 'oInput';
+				oInput.style.display='none';
+				alert('复制成功');
 			},
 			getMainData: function(id) {
 				var self = this;
@@ -56,4 +99,34 @@
 	    }
 	});   
 </script>
-
+<style type="text/css">
+	.closeIcon{width:15px;height: 15px;}
+	.show_card{
+		width: 288px;
+		/* height: 0; */
+		position: fixed;
+		top:calc(50% - 145px);
+		right:calc(50% - 145px);
+		background:#fff;
+		overflow: hidden;
+		transition:all 1s;
+		-webkit-transition:all 0.6s;
+		text-align: center;
+		border-radius: 5%;
+		box-shadow:0px 0px 8px rgba(51, 51, 51, 0.3);
+		z-index: 999999;
+		font-size:16px;
+	}
+	.show_card .titIcon{width: 30px;height: 30rpx;display: block;margin: 0 auto 20px auto;}
+	.contact_show{
+		padding: 30px 0;
+		line-height: 24px;
+	    opacity: 1;
+	}
+	.contact_hidden{
+	    width:0;
+	    opacity:0;
+	}
+	.show_card .ewm img{width:130px;height: 120px;display: block;margin: 15px auto 0 auto;}
+	
+</style>
